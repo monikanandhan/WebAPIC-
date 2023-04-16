@@ -64,3 +64,14 @@ C:\Users\monica.a\source\repos\Banking\Banking\obj\Debug\net6.0\Banking.genrunti
 C:\Users\monica.a\source\repos\Banking\Banking\obj\Debug\net6.0\ref\Banking.dll
 C:\Users\monica.a\source\repos\Banking\Banking\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
 C:\Users\monica.a\source\repos\Banking\Banking\bin\Debug\net6.0\System.IO.Packaging.dll
+C:\Users\monica.a\source\repos\Banking\Banking\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\monica.a\source\repos\Banking\Banking\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\monica.a\source\repos\Banking\Banking\bin\Debug\net6.0\Serilog.dll
+C:\Users\monica.a\source\repos\Banking\Banking\bin\Debug\net6.0\Serilog.AspNetCore.dll
+C:\Users\monica.a\source\repos\Banking\Banking\bin\Debug\net6.0\Serilog.Extensions.Hosting.dll
+C:\Users\monica.a\source\repos\Banking\Banking\bin\Debug\net6.0\Serilog.Extensions.Logging.dll
+C:\Users\monica.a\source\repos\Banking\Banking\bin\Debug\net6.0\Serilog.Formatting.Compact.dll
+C:\Users\monica.a\source\repos\Banking\Banking\bin\Debug\net6.0\Serilog.Settings.Configuration.dll
+C:\Users\monica.a\source\repos\Banking\Banking\bin\Debug\net6.0\Serilog.Sinks.Console.dll
+C:\Users\monica.a\source\repos\Banking\Banking\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
+C:\Users\monica.a\source\repos\Banking\Banking\bin\Debug\net6.0\Serilog.Sinks.File.dll

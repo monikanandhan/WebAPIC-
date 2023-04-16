@@ -49,7 +49,7 @@ namespace Banking.ViewModel
         public string state { get; set; }
         public string Country { get; set; }
         public string pincode { get; set; }
-        public List<Customer> customers { get; set; }
+        public List<string> customers { get; set; }
 
     }
 }

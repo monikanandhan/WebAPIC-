@@ -56,8 +56,8 @@ namespace Banking.ViewModel
         public string Account_Number { get; set; }
         public string Account_Type { get; set; }
         
-        public List<LoanDetails> loanDetails { get; set; }
-        public List<Bank> Bank_Details{get; set; }
+        public List<int> loanDetails { get; set; }
+        public List<string> Bank_Details{get; set; }
 
     }
 

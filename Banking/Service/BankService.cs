@@ -1,5 +1,8 @@
 ﻿using Banking.Model;
 using Banking.ViewModel;
+using MySqlX.XDevAPI.Common;
+using Newtonsoft.Json;
+using Serilog;
 using System.Reflection.Metadata.Ecma335;
 
 namespace Banking.Service
@@ -14,6 +17,7 @@ namespace Banking.Service
 
         public void AddNewBankDetails(BankByNameVM bank)
         {
+            Log.Information("Inside add-Bank-Details Method:{Controller}", GetType().Name);
             var NewBank = new Bank()
             {
                 Bank_Name = bank.Bank_Name,
@@ -29,17 +33,17 @@ namespace Banking.Service
                 pincode = bank.pincode
 
             };
-            Context.bank.Add(NewBank);  
+            Context.bank.Add(NewBank);
+            //Log.Information($"The response for the get Banking is {JsonConvert.SerializeObject(NewBank)}");
             Context.SaveChanges();
            
         }
 
-        public List<Bank> GetAllBanks()=>Context.bank.ToList();
-
-        public List<BankWithCustomerVM> GetBankWithCustomer(string Bank_Name)
+        public List<BankByNameVM> GetAllBanks()
         {
-            var GetBankId = Context.bank.Where(x => x.Bank_Name == Bank_Name).Select(n => new BankWithCustomerVM()
+            var GetBankId = Context.bank.Select(n => new BankByNameVM()
             {
+
                 Id = n.Id,
                 Bank_Name = n.Bank_Name,
                 Branch_Name = n.Branch_Name,
@@ -52,10 +56,42 @@ namespace Banking.Service
                 state = n.state,
                 Country = n.Country,
                 pincode = n.pincode,
-                customers = n.Customer_Banks.Where(x => x.BankId== n.Id).Select(x => x.customer).ToList()
+
 
             }).ToList();
             Context.SaveChanges();
+
+            return GetBankId;
+        }
+
+        public List<BankWithCustomerVM> GetBankWithCustomer(string Bank_Name)
+        {
+            Log.Information("Inside get-Bank-Details Method:{Controller}", GetType().Name);
+            var GetBankId = Context.bank.Where(x => x.Bank_Name == Bank_Name).Select(n => new BankWithCustomerVM()
+            {
+               
+                Id = n.Id,
+                Bank_Name = n.Bank_Name,
+                Branch_Name = n.Branch_Name,
+                IFSC = n.IFSC,
+                Contact_Number = n.Contact_Number,
+                Email = n.Email,
+                Address1 = n.Address1,
+                Address2 = n.Address2,
+                city = n.city,
+                state = n.state,
+                Country = n.Country,
+                pincode = n.pincode,
+                customers = n.Customer_Banks.Where(x => x.BankId== n.Id).Select(x => x.customer.Account_Number).ToList()
+
+            }).ToList();
+            Context.SaveChanges();
+
+
+
+
+
+            Log.Information($"The user input is {JsonConvert.SerializeObject(Bank_Name)}");
             return GetBankId;
         }
 
@@ -81,8 +117,9 @@ namespace Banking.Service
         //    return GetBankId;
         //}
         
-       public Bank UpdateBank(string IFSC,BankVM bank)
+       public Bank UpdateBank(string IFSC, BankByNameVM bank)
         {
+            Log.Information("Inside update-Bank-Details Method:{Controller}", GetType().Name);
             var NewDetails = Context.bank.FirstOrDefault(n=>n.IFSC== IFSC);
             if(NewDetails != null) 
             {
@@ -99,18 +136,22 @@ namespace Banking.Service
                 NewDetails.pincode = bank.pincode;
             }
             Context.SaveChanges();
+            Log.Information($"The user input is {JsonConvert.SerializeObject(IFSC)}");
             return NewDetails;
         }
 
-        public void DeleteByIFSC(string IFSC)
+        public Bank DeleteByIFSC(string IFSC)
         {
+            Log.Information("Inside Delete-Bank-Details Method:{Controller}", GetType().Name);
             var RemoveDetails = Context.bank.FirstOrDefault(n => n.IFSC == IFSC);
+            Log.Information($"The user input is {JsonConvert.SerializeObject(IFSC)}");
             if (RemoveDetails != null)
             {
                 Context.bank.Remove(RemoveDetails);   
                 Context.SaveChanges();  
 
             }
+            return RemoveDetails;
         }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using Banking.Model;
 using Banking.ViewModel;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Newtonsoft.Json;
+using Serilog;
 using System.Diagnostics.Metrics;
 
 namespace Banking.Service
@@ -15,6 +17,7 @@ namespace Banking.Service
 
         public void AddCustomerDetails(CustomerVM customer)
         {
+            Log.Information("Inside Add-New-Customer-Details:{@Controller}", GetType().Name);
             var NewCustomer = new Customer()
             {
                 First_Name = customer.First_Name,
@@ -62,6 +65,7 @@ namespace Banking.Service
 
         public List<CustomerWithLoanDetailsVM> GetallCustomer()
         {
+            Log.Information("Inside Get-all-Customer-Details:{@Controller}", GetType().Name);
             var GetAll = Context.Customer.Select(c => new CustomerWithLoanDetailsVM()
             {
                 Id = c.Id,
@@ -80,8 +84,8 @@ namespace Banking.Service
                 pincode = c.pincode,
                 Account_Number = c.Account_Number,
                 Account_Type = c.Account_Type,
-                loanDetails = c.loanDetailsCusList.Where(n => n.CsutomerId == c.Id).Select(n => n.loanDetails).ToList(),
-                Bank_Details=c.Customer_Banks.Where(n=>n.customerId==c.Id).Select(s=>s.Bank).ToList()
+                loanDetails = c.loanDetailsCusList.Where(n => n.CsutomerId == c.Id).Select(n => n.loanDetails.Id).ToList(),
+                Bank_Details=c.Customer_Banks.Where(n=>n.customerId==c.Id).Select(s=>s.Bank.IFSC).ToList()
                 
               
             }).ToList();
@@ -91,6 +95,7 @@ namespace Banking.Service
 
         public List<CustomerWithLoanDetailsVM> GetCustomer(string Account_number,string First_Name,string Aadhar )
         {
+            Log.Information("Inside Get-Customer-Details-by-Account_number-First_name-Aadhar:{@Controller}", GetType().Name);
             var result = Context.Customer.Where(x => x.Account_Number == Account_number || x.First_Name == First_Name || x.Aadhar == Aadhar).Select(c => new CustomerWithLoanDetailsVM()
             {
                 Id = c.Id,
@@ -109,15 +114,19 @@ namespace Banking.Service
                 pincode = c.pincode,
                 Account_Number = c.Account_Number,
                 Account_Type = c.Account_Type,
-                loanDetails = c.loanDetailsCusList.Where(n => n.CsutomerId == c.Id).Select(n => n.loanDetails).ToList(),
-                Bank_Details = c.Customer_Banks.Where(n => n.customerId == c.Id).Select(s => s.Bank).ToList()
+                loanDetails = c.loanDetailsCusList.Where(n => n.CsutomerId == c.Id).Select(n => n.loanDetails.Id).ToList(),
+                Bank_Details = c.Customer_Banks.Where(n => n.customerId == c.Id).Select(s => s.Bank.IFSC).ToList()
 
             }).ToList();
             Context.SaveChanges();
+            Log.Information($"The user input is {JsonConvert.SerializeObject(Account_number)}");
+            Log.Information($"The user input is {JsonConvert.SerializeObject(First_Name)}");
+            Log.Information($"The user input is {JsonConvert.SerializeObject(Aadhar)}");
             return result;
         }
         public List<CustomerWithLoanDetailsVM> GetCustomerWithID(int id)
         {
+            Log.Information("Inside Get-Customer-Details-by-id:{@Controller}", GetType().Name);
             var result = Context.Customer.Where(x => x.Id == id).Select(c => new CustomerWithLoanDetailsVM()
             {
                 Id = c.Id,
@@ -136,16 +145,18 @@ namespace Banking.Service
                 pincode = c.pincode,
                 Account_Number = c.Account_Number,
                 Account_Type = c.Account_Type,
-                loanDetails = c.loanDetailsCusList.Where(n => n.CsutomerId == c.Id).Select(n => n.loanDetails).ToList(),
-                Bank_Details = c.Customer_Banks.Where(n => n.customerId == c.Id).Select(s => s.Bank).ToList()
+                loanDetails = c.loanDetailsCusList.Where(n => n.CsutomerId == c.Id).Select(n => n.loanDetails.Id).ToList(),
+                Bank_Details = c.Customer_Banks.Where(n => n.customerId == c.Id).Select(s => s.Bank.IFSC).ToList()
 
             }).ToList();
             Context.SaveChanges();
+            Log.Information($"The user input is {JsonConvert.SerializeObject(id)}");
             return result;
         }
 
         public Customer UpdateCustomer(int id,CustomerDetailsVM customer)
         {
+            Log.Information("Inside update-Customer-Details-By-id:{@Controller}", GetType().Name);
             var result=Context.Customer.FirstOrDefault(x=>x.Id == id);
             if (result != null)
             {
@@ -167,18 +178,22 @@ namespace Banking.Service
 
             }
             Context.SaveChanges();
+            Log.Information($"The user input is {JsonConvert.SerializeObject(id)}");
             return result;
         }
 
 
-        public void DeleteCustomerById(int id)
+        public Customer DeleteCustomerById(int id)
         {
+            Log.Information("Inside Delet-Customer-Details-By-Id:{@Controller}", GetType().Name);
             var DeleteData = Context.Customer.FirstOrDefault(x => x.Id == id);
+            Log.Information($"The user input is {JsonConvert.SerializeObject(id)}");
             if (DeleteData != null)
             {
                 Context.Customer.Remove(DeleteData);
                 Context.SaveChanges();
             }
+            return DeleteData;
         }
         
     }

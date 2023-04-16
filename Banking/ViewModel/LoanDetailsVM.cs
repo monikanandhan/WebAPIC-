@@ -19,7 +19,7 @@ namespace Banking.ViewModel
         public DateTime Loan_Provided { get; set; }
         public string payment_Mode { get; set; }
 
-        public List<BankLoan> bankLoans { get; set; }   
+        public List<string> bankLoans { get; set; }   
        
     }
 
