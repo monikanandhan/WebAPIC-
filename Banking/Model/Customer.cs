@@ -11,16 +11,18 @@ namespace Banking.Model
     {
 
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "First Name is required")]
+       
+
         public string First_Name { get; set; }
         public string Last_Name { get; set; }
-        [Required]
+        [Required(ErrorMessage = "date of birth is required")]
         public DateTime DateOfBirth { get; set; }
         public float age { get; set; }
-        [Required]
+        [Required(ErrorMessage = "First Mobile Number is required")]  
         public long Mobile_Number { get; set; }
         public string Email { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Aadhar is required")]
         public string Aadhar { get; set; }
         public string Address1 { get; set; }
         public string Address2 { get; set; }

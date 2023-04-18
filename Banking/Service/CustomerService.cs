@@ -1,9 +1,12 @@
 ﻿using Banking.Model;
 using Banking.ViewModel;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using Serilog;
 using System.Diagnostics.Metrics;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace Banking.Service
 {
@@ -15,11 +18,38 @@ namespace Banking.Service
             Context = _Context;     
         }
 
+        //validation
+        /********** To check already exists or not **********/
+        public int TocheckFirstNameAadhar(string First_name, string Aadhar)
+        {
+            Log.Information("Inside To-check-First_Name-Aadhar-exists:{@Controller}", GetType().Name);
+            var GetAll = Context.Customer.Where(x => x.First_Name == First_name && x.Aadhar == Aadhar).Count();
+            Log.Information($"The user input is {JsonConvert.SerializeObject(Aadhar)}");
+            Log.Information($"The user input is {JsonConvert.SerializeObject(First_name)}");
+            Context.SaveChanges();
+            Log.Information($"The response for the get Banking is {JsonConvert.SerializeObject(GetAll)}");
+            return GetAll;
+        }
+
+        /********** To check is alphabet or not **********/
+        public bool IsAlpha(string First_name)
+        {
+            Log.Information("Inside To-check-alphabets-First_name:{@Controller}", GetType().Name);
+           
+            var boolResult= Regex.IsMatch(First_name, "^[a-zA-Z ]+$");
+            Log.Information($"The user input is {JsonConvert.SerializeObject(First_name)}");
+            Log.Information($"The response for the get Banking is {JsonConvert.SerializeObject(boolResult)}");
+            
+            return boolResult;
+        }
+
+
         public void AddCustomerDetails(CustomerVM customer)
         {
             Log.Information("Inside Add-New-Customer-Details:{@Controller}", GetType().Name);
             var NewCustomer = new Customer()
             {
+
                 First_Name = customer.First_Name,
                 Last_Name = customer.Last_Name,
                 DateOfBirth = customer.DateOfBirth,
@@ -63,36 +93,40 @@ namespace Banking.Service
 
         }
 
-        public List<CustomerWithLoanDetailsVM> GetallCustomer()
-        {
-            Log.Information("Inside Get-all-Customer-Details:{@Controller}", GetType().Name);
-            var GetAll = Context.Customer.Select(c => new CustomerWithLoanDetailsVM()
-            {
-                Id = c.Id,
-                First_Name = c.First_Name,
-                Last_Name = c.Last_Name,
-                DateOfBirth = c.DateOfBirth,
-                age = c.age,
-                Mobile_Number = c.Mobile_Number,
-                Email = c.Email,
-                Aadhar = c.Aadhar,
-                Address1 = c.Address1,
-                Address2 = c.Address2,
-                city = c.city,
-                state = c.state,
-                Country = c.Country,
-                pincode = c.pincode,
-                Account_Number = c.Account_Number,
-                Account_Type = c.Account_Type,
-                loanDetails = c.loanDetailsCusList.Where(n => n.CsutomerId == c.Id).Select(n => n.loanDetails.Id).ToList(),
-                Bank_Details=c.Customer_Banks.Where(n=>n.customerId==c.Id).Select(s=>s.Bank.IFSC).ToList()
-                
-              
-            }).ToList();
-            Context.SaveChanges();
-            return GetAll;
-        }
+        //public List<CustomerWithLoanDetailsVM> GetallCustomer()
+        //{
+        //    Log.Information("Inside Get-all-Customer-Details:{@Controller}", GetType().Name);
+        //    var GetAll = Context.Customer.Select(c => new CustomerWithLoanDetailsVM()
+        //    {
+        //        Id = c.Id,
+        //        First_Name = c.First_Name,
+        //        Last_Name = c.Last_Name,
+        //        DateOfBirth = c.DateOfBirth,
+        //        age = c.age,
+        //        Mobile_Number = c.Mobile_Number,
+        //        Email = c.Email,
+        //        Aadhar = c.Aadhar,
+        //        Address1 = c.Address1,
+        //        Address2 = c.Address2,
+        //        city = c.city,
+        //        state = c.state,
+        //        Country = c.Country,
+        //        pincode = c.pincode,
+        //        Account_Number = c.Account_Number,
 
+        //        Account_Type = c.Account_Type,
+        //        loanDetails = c.loanDetailsCusList.Where(n => n.CsutomerId == c.Id).Select(n => n.loanDetails.Id).ToList(),
+        //        Bank_Details=c.Customer_Banks.Where(n=>n.customerId==c.Id).Select(s=>s.Bank.IFSC).ToList()
+
+
+        //    }).ToList();
+        //    Context.SaveChanges();
+        //    return GetAll;
+        //}
+
+        
+        
+        //Multiple optional parameter
         public List<CustomerWithLoanDetailsVM> GetCustomer(string Account_number,string First_Name,string Aadhar )
         {
             Log.Information("Inside Get-Customer-Details-by-Account_number-First_name-Aadhar:{@Controller}", GetType().Name);
