@@ -1,7 +1,9 @@
 ﻿using Banking.Model;
 using Banking.ViewModel;
+using DocumentFormat.OpenXml.Bibliography;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Mysqlx;
 using Newtonsoft.Json;
 using Serilog;
 using System.Diagnostics.Metrics;
@@ -43,7 +45,7 @@ namespace Banking.Service
             return boolResult;
         }
 
-
+      
         public void AddCustomerDetails(CustomerVM customer)
         {
             Log.Information("Inside Add-New-Customer-Details:{@Controller}", GetType().Name);
@@ -70,15 +72,26 @@ namespace Banking.Service
             };
             Context.Customer.Add(NewCustomer);
             Context.SaveChanges();
-            foreach (var item in customer.loanDetailsId)
+            
+            var ScoreDetails = Context.cibil.Where(s => s.Aadhar_Number==customer.Aadhar).AsQueryable()
+                .Any(m =>m.CIBIL_year=="2023" && m.CIBIL_Score >700);
+            if (!ScoreDetails)
             {
-                var newId = new Customer_LoanDetails()
+                Console.WriteLine("Not Found");
+            }
+            else
+            {
+                
+                foreach (var item in customer.loanDetailsId)
                 {
-                    CsutomerId = NewCustomer.Id,
-                    LoanDetailsDemoId = item
-                };
-                Context.customer_LoanDetails.Add(newId);
-                Context.SaveChanges();
+                    var newId = new Customer_LoanDetails()
+                    {
+                        CsutomerId = NewCustomer.Id,
+                        LoanDetailsDemoId = item
+                    };
+                    Context.customer_LoanDetails.Add(newId);
+                    Context.SaveChanges();
+                }
             }
             foreach (var item in customer.BankId)
             {
@@ -90,9 +103,10 @@ namespace Banking.Service
                 Context.customer_Banks.Add(newBankID);
                 Context.SaveChanges();
             }
-
+           
         }
 
+        /************GET-ALL*************/
         //public List<CustomerWithLoanDetailsVM> GetallCustomer()
         //{
         //    Log.Information("Inside Get-all-Customer-Details:{@Controller}", GetType().Name);
@@ -116,7 +130,7 @@ namespace Banking.Service
 
         //        Account_Type = c.Account_Type,
         //        loanDetails = c.loanDetailsCusList.Where(n => n.CsutomerId == c.Id).Select(n => n.loanDetails.Id).ToList(),
-        //        Bank_Details=c.Customer_Banks.Where(n=>n.customerId==c.Id).Select(s=>s.Bank.IFSC).ToList()
+        //        Bank_Details = c.Customer_Banks.Where(n => n.customerId == c.Id).Select(s => s.Bank.IFSC).ToList()
 
 
         //    }).ToList();
@@ -124,13 +138,13 @@ namespace Banking.Service
         //    return GetAll;
         //}
 
-        
-        
+
+
         //Multiple optional parameter
-        public List<CustomerWithLoanDetailsVM> GetCustomer(string Account_number,string First_Name,string Aadhar )
+        public List<CustomerWithLoanDetailsVM> GetCustomer(string Account_number, string First_Name, string Aadhar)
         {
             Log.Information("Inside Get-Customer-Details-by-Account_number-First_name-Aadhar:{@Controller}", GetType().Name);
-            var result = Context.Customer.Where(x => x.Account_Number == Account_number || x.First_Name == First_Name || x.Aadhar == Aadhar).Select(c => new CustomerWithLoanDetailsVM()
+            var GetCustomer = Context.Customer.Where(x => x.Account_Number == Account_number || x.First_Name == First_Name || x.Aadhar == Aadhar).Select(c => new CustomerWithLoanDetailsVM()
             {
                 Id = c.Id,
                 First_Name = c.First_Name,
@@ -153,15 +167,15 @@ namespace Banking.Service
 
             }).ToList();
             Context.SaveChanges();
-            Log.Information($"The user input is {JsonConvert.SerializeObject(Account_number)}");
-            Log.Information($"The user input is {JsonConvert.SerializeObject(First_Name)}");
-            Log.Information($"The user input is {JsonConvert.SerializeObject(Aadhar)}");
-            return result;
+            Log.Information($"The user input for Get-Customer-Details-by-Account_number is {JsonConvert.SerializeObject(Account_number)}");
+            Log.Information($"The user input for Get-Customer-Details-by-First-Name is {JsonConvert.SerializeObject(First_Name)}");
+            Log.Information($"The user input for Get-Customer-Details-by-Aadhar is {JsonConvert.SerializeObject(Aadhar)}");
+            return GetCustomer;
         }
-        public List<CustomerWithLoanDetailsVM> GetCustomerWithID(int id)
+        public CustomerWithLoanDetailsVM GetCustomerWithID(int id)
         {
             Log.Information("Inside Get-Customer-Details-by-id:{@Controller}", GetType().Name);
-            var result = Context.Customer.Where(x => x.Id == id).Select(c => new CustomerWithLoanDetailsVM()
+            var GetCustomerID = Context.Customer.Where(x => x.Id == id).Select(c => new CustomerWithLoanDetailsVM()
             {
                 Id = c.Id,
                 First_Name = c.First_Name,
@@ -182,52 +196,52 @@ namespace Banking.Service
                 loanDetails = c.loanDetailsCusList.Where(n => n.CsutomerId == c.Id).Select(n => n.loanDetails.Id).ToList(),
                 Bank_Details = c.Customer_Banks.Where(n => n.customerId == c.Id).Select(s => s.Bank.IFSC).ToList()
 
-            }).ToList();
+            }).FirstOrDefault();
             Context.SaveChanges();
-            Log.Information($"The user input is {JsonConvert.SerializeObject(id)}");
-            return result;
+            Log.Information($"The user input for Get-Customer-Details-by-Id is {JsonConvert.SerializeObject(id)}");
+            return GetCustomerID;
         }
 
-        public Customer UpdateCustomer(int id,CustomerDetailsVM customer)
+        public Customer UpdateCustomer(string Account_Number,CustomerDetailsVM customer)
         {
             Log.Information("Inside update-Customer-Details-By-id:{@Controller}", GetType().Name);
-            var result=Context.Customer.FirstOrDefault(x=>x.Id == id);
-            if (result != null)
+            var updateCustomer=Context.Customer.FirstOrDefault(x=>x.Account_Number== Account_Number);
+            if (updateCustomer != null)
             {
-                result.First_Name = customer.First_Name;
-                result.Last_Name = customer.Last_Name;
-                result.DateOfBirth = customer.DateOfBirth;
-                result.age = (((DateTime.Now).Subtract(customer.DateOfBirth)).Days) / 360;
-                result.Mobile_Number = customer.Mobile_Number;
-                result.Email = customer.Email;
-                result.Aadhar = customer.Aadhar;
-                result.Address1 = customer.Address1;
-                result.Address2 = customer.Address2;
-                result.city = customer.city;
-                result.state = customer.state;
-                result.Country = customer.Country;
-                result.pincode = customer.pincode;
-                result.Account_Number = customer.Account_Number;
-                result.Account_Type = customer.Account_Type;
+                updateCustomer.First_Name = customer.First_Name;
+                updateCustomer.Last_Name = customer.Last_Name;
+                updateCustomer.DateOfBirth = customer.DateOfBirth;
+                updateCustomer.age = (((DateTime.Now).Subtract(customer.DateOfBirth)).Days) / 360;
+                updateCustomer.Mobile_Number = customer.Mobile_Number;
+                updateCustomer.Email = customer.Email;
+                updateCustomer.Aadhar = customer.Aadhar;
+                updateCustomer.Address1 = customer.Address1;
+                updateCustomer.Address2 = customer.Address2;
+                updateCustomer.city = customer.city;
+                updateCustomer.state = customer.state;
+                updateCustomer.Country = customer.Country;
+                updateCustomer.pincode = customer.pincode;
+                updateCustomer.Account_Number = customer.Account_Number;
+                updateCustomer.Account_Type = customer.Account_Type;
 
             }
             Context.SaveChanges();
-            Log.Information($"The user input is {JsonConvert.SerializeObject(id)}");
-            return result;
+            Log.Information($"The user input  for update-Customer-Details-By-id is {JsonConvert.SerializeObject(Account_Number)}");
+            return updateCustomer;
         }
 
 
-        public Customer DeleteCustomerById(int id)
+        public Customer DeleteCustomerById(string Account_Number)
         {
-            Log.Information("Inside Delet-Customer-Details-By-Id:{@Controller}", GetType().Name);
-            var DeleteData = Context.Customer.FirstOrDefault(x => x.Id == id);
-            Log.Information($"The user input is {JsonConvert.SerializeObject(id)}");
-            if (DeleteData != null)
+            Log.Information("Inside Delete-Customer-Details-By-Id:{@Controller}", GetType().Name);
+            var DeleteCustomer = Context.Customer.FirstOrDefault(x => x.Account_Number == Account_Number);
+            Log.Information($"The user input for Delete-Customer-Details-By-Id is {JsonConvert.SerializeObject(Account_Number)}");
+            if (DeleteCustomer != null)
             {
-                Context.Customer.Remove(DeleteData);
+                Context.Customer.Remove(DeleteCustomer);
                 Context.SaveChanges();
             }
-            return DeleteData;
+            return DeleteCustomer;
         }
         
     }

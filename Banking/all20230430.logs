@@ -1,0 +1,240 @@
+2023-04-30 18:29:42.224 +05:30 [INF] Inside Add-New-Cibil-Details:CibilController
+2023-04-30 18:29:42.345 +05:30 [INF] Inside Add-New-Cibil-Details:CibilService
+2023-04-30 18:29:47.567 +05:30 [INF] The response for the Add-New-Cibil-Details is {"Aadhar_Number":"ABCDE5674G","CIBIL_year":"2023","CIBIL_Score":710.0}
+2023-04-30 18:30:09.509 +05:30 [INF] Inside Add-New-Cibil-Details:CibilController
+2023-04-30 18:30:09.510 +05:30 [INF] Inside Add-New-Cibil-Details:CibilService
+2023-04-30 18:30:09.618 +05:30 [INF] The response for the Add-New-Cibil-Details is {"Aadhar_Number":"ABCDE5674G","CIBIL_year":"2022","CIBIL_Score":750.0}
+2023-04-30 18:30:22.885 +05:30 [INF] Inside Add-New-Cibil-Details:CibilController
+2023-04-30 18:30:22.889 +05:30 [INF] Inside Add-New-Cibil-Details:CibilService
+2023-04-30 18:30:22.922 +05:30 [INF] The response for the Add-New-Cibil-Details is {"Aadhar_Number":"ABCDE5674G","CIBIL_year":"2021","CIBIL_Score":800.0}
+2023-04-30 18:30:46.756 +05:30 [INF] Inside Add-New-Cibil-Details:CibilController
+2023-04-30 18:30:46.768 +05:30 [INF] Inside Add-New-Cibil-Details:CibilService
+2023-04-30 18:30:46.796 +05:30 [INF] The response for the Add-New-Cibil-Details is {"Aadhar_Number":"ERTYDS656Y","CIBIL_year":"2023","CIBIL_Score":800.0}
+2023-04-30 18:30:56.248 +05:30 [INF] Inside Add-New-Cibil-Details:CibilController
+2023-04-30 18:30:56.250 +05:30 [INF] Inside Add-New-Cibil-Details:CibilService
+2023-04-30 18:30:56.273 +05:30 [INF] The response for the Add-New-Cibil-Details is {"Aadhar_Number":"ERTYDS656Y","CIBIL_year":"2022","CIBIL_Score":840.0}
+2023-04-30 18:31:08.560 +05:30 [INF] Inside Add-New-Cibil-Details:CibilController
+2023-04-30 18:31:08.563 +05:30 [INF] Inside Add-New-Cibil-Details:CibilService
+2023-04-30 18:31:08.589 +05:30 [INF] The response for the Add-New-Cibil-Details is {"Aadhar_Number":"ERTYDS656Y","CIBIL_year":"2021","CIBIL_Score":900.0}
+2023-04-30 18:31:32.780 +05:30 [INF] Inside Add-New-Cibil-Details:CibilController
+2023-04-30 18:31:32.785 +05:30 [INF] Inside Add-New-Cibil-Details:CibilService
+2023-04-30 18:31:32.806 +05:30 [INF] The response for the Add-New-Cibil-Details is {"Aadhar_Number":"HGFTRYY768T","CIBIL_year":"2023","CIBIL_Score":750.0}
+2023-04-30 18:31:42.077 +05:30 [INF] Inside Add-New-Cibil-Details:CibilController
+2023-04-30 18:31:42.080 +05:30 [INF] Inside Add-New-Cibil-Details:CibilService
+2023-04-30 18:31:42.109 +05:30 [INF] The response for the Add-New-Cibil-Details is {"Aadhar_Number":"HGFTRYY768T","CIBIL_year":"2022","CIBIL_Score":700.0}
+2023-04-30 18:31:55.931 +05:30 [INF] Inside Add-New-Cibil-Details:CibilController
+2023-04-30 18:31:55.940 +05:30 [INF] Inside Add-New-Cibil-Details:CibilService
+2023-04-30 18:31:55.964 +05:30 [INF] The response for the Add-New-Cibil-Details is {"Aadhar_Number":"HGFTRYY768T","CIBIL_year":"2021","CIBIL_Score":850.0}
+2023-04-30 18:33:02.916 +05:30 [INF] Inside Get-Cibil-Details-by-id:CibilController
+2023-04-30 18:33:02.995 +05:30 [INF] Inside Get-Cibil-Details-by-id:CibilService
+2023-04-30 18:33:03.984 +05:30 [INF] The user input for Get-Cibil-Details-by-id is "HGFTRYY768T"
+2023-04-30 18:33:04.014 +05:30 [INF] The response for the Get-Cibil-Details-by-id is [{"Id":7,"Aadhar_Number":"HGFTRYY768T","CIBIL_year":"2023","CIBIL_Score":750.0},{"Id":8,"Aadhar_Number":"HGFTRYY768T","CIBIL_year":"2022","CIBIL_Score":700.0},{"Id":9,"Aadhar_Number":"HGFTRYY768T","CIBIL_year":"2021","CIBIL_Score":850.0}]
+2023-04-30 18:35:08.797 +05:30 [INF] Inside Get-all-Cibil-Details:CibilController
+2023-04-30 18:35:08.799 +05:30 [INF] Inside Get-all-Cibil-Details:CibilService
+2023-04-30 18:35:08.818 +05:30 [INF] The response for the Get-all-Cibil-Details is [{"Id":0,"Aadhar_Number":"ABCDE5674G","CIBIL_year":"2023","CIBIL_Score":710.0},{"Id":0,"Aadhar_Number":"ABCDE5674G","CIBIL_year":"2022","CIBIL_Score":750.0},{"Id":0,"Aadhar_Number":"ABCDE5674G","CIBIL_year":"2021","CIBIL_Score":800.0},{"Id":0,"Aadhar_Number":"ERTYDS656Y","CIBIL_year":"2023","CIBIL_Score":800.0},{"Id":0,"Aadhar_Number":"ERTYDS656Y","CIBIL_year":"2022","CIBIL_Score":840.0},{"Id":0,"Aadhar_Number":"ERTYDS656Y","CIBIL_year":"2021","CIBIL_Score":900.0},{"Id":0,"Aadhar_Number":"HGFTRYY768T","CIBIL_year":"2023","CIBIL_Score":750.0},{"Id":0,"Aadhar_Number":"HGFTRYY768T","CIBIL_year":"2022","CIBIL_Score":700.0},{"Id":0,"Aadhar_Number":"HGFTRYY768T","CIBIL_year":"2021","CIBIL_Score":850.0}]
+2023-04-30 18:45:41.206 +05:30 [INF] Inside Add-New-Loan-Details:LoanDetailsController
+2023-04-30 18:45:41.279 +05:30 [INF] Inside Add-New-Loan-Details:LoanDetailsService
+2023-04-30 18:45:44.171 +05:30 [INF] The response for the Add-New-Loan-Details is {"Loan_Amount":20000.0,"Loan_Provided":"2023-04-30T13:15:24.974Z","payment_Mode":"cash","LoanID":[1]}
+2023-04-30 18:46:02.059 +05:30 [INF] Inside Add-New-Loan-Details:LoanDetailsController
+2023-04-30 18:46:02.060 +05:30 [INF] Inside Add-New-Loan-Details:LoanDetailsService
+2023-04-30 18:46:02.124 +05:30 [INF] The response for the Add-New-Loan-Details is {"Loan_Amount":40000.0,"Loan_Provided":"2023-04-30T13:15:24.974Z","payment_Mode":"UPI","LoanID":[2]}
+2023-04-30 18:46:13.780 +05:30 [INF] Inside Add-New-Loan-Details:LoanDetailsController
+2023-04-30 18:46:13.784 +05:30 [INF] Inside Add-New-Loan-Details:LoanDetailsService
+2023-04-30 18:46:13.823 +05:30 [INF] The response for the Add-New-Loan-Details is {"Loan_Amount":50000.0,"Loan_Provided":"2023-04-30T13:15:24.974Z","payment_Mode":"NEFT","LoanID":[3]}
+2023-04-30 18:46:28.093 +05:30 [INF] Inside Add-New-Loan-Details:LoanDetailsController
+2023-04-30 18:46:28.095 +05:30 [INF] Inside Add-New-Loan-Details:LoanDetailsService
+2023-04-30 18:46:28.125 +05:30 [INF] The response for the Add-New-Loan-Details is {"Loan_Amount":60000.0,"Loan_Provided":"2023-04-30T13:15:24.974Z","payment_Mode":"RTGS","LoanID":[4]}
+2023-04-30 18:47:00.097 +05:30 [INF] Inside Get-all-Loan-Details:LoanDetailsController
+2023-04-30 18:47:00.113 +05:30 [INF] Inside Get-Loan-Details:LoanDetailsService
+2023-04-30 18:47:01.040 +05:30 [INF] The response for the Get-all-Loan-Details is [{"id":0,"Loan_Amount":20000.0,"Loan_Provided":"2023-04-30T13:15:24.974","payment_Mode":"cash","bankLoans":["Jewel Loan"]},{"id":0,"Loan_Amount":40000.0,"Loan_Provided":"2023-04-30T13:15:24.974","payment_Mode":"UPI","bankLoans":["personal Loan"]},{"id":0,"Loan_Amount":50000.0,"Loan_Provided":"2023-04-30T13:15:24.974","payment_Mode":"NEFT","bankLoans":["House Loan"]},{"id":0,"Loan_Amount":60000.0,"Loan_Provided":"2023-04-30T13:15:24.974","payment_Mode":"RTGS","bankLoans":["Bike Loan"]}]
+2023-04-30 18:47:15.874 +05:30 [INF] Inside Get-Loan-Details-by-id:LoanDetailsController
+2023-04-30 18:47:15.877 +05:30 [INF] Inside Get-Loan-Details-by-id:LoanDetailsService
+2023-04-30 18:47:15.920 +05:30 [INF] The user input for Get-Loan-Details-by-id is 1
+2023-04-30 18:47:15.921 +05:30 [INF] The response for the  Get-Loan-Details-by-id is [{"id":1,"Loan_Amount":20000.0,"Loan_Provided":"2023-04-30T13:15:24.974","payment_Mode":"cash","bankLoans":["Jewel Loan"]}]
+2023-04-30 18:52:18.263 +05:30 [INF] Inside Add-New-Customer-Details:CustomerController
+2023-04-30 18:52:18.306 +05:30 [INF] Inside To-check-alphabets-First_name:CustomerService
+2023-04-30 18:52:18.446 +05:30 [INF] The user input is "kalai"
+2023-04-30 18:52:18.452 +05:30 [INF] The response for the get Banking is true
+2023-04-30 18:52:18.469 +05:30 [INF] Inside To-check-First_Name-Aadhar-exists:CustomerService
+2023-04-30 18:52:20.037 +05:30 [INF] The user input is "HGFTRYY768T"
+2023-04-30 18:52:20.039 +05:30 [INF] The user input is "kalai"
+2023-04-30 18:52:20.051 +05:30 [INF] The response for the get Banking is 0
+2023-04-30 18:52:20.055 +05:30 [INF] Inside Add-New-Customer-Details:CustomerService
+2023-04-30 18:54:00.929 +05:30 [INF] Inside Add-New-Customer-Details:CustomerController
+2023-04-30 18:54:01.012 +05:30 [INF] Inside To-check-alphabets-First_name:CustomerService
+2023-04-30 18:54:01.219 +05:30 [INF] The user input is "string"
+2023-04-30 18:54:01.225 +05:30 [INF] The response for the get Banking is true
+2023-04-30 18:54:01.245 +05:30 [INF] Inside To-check-First_Name-Aadhar-exists:CustomerService
+2023-04-30 18:54:04.039 +05:30 [INF] The user input is "string"
+2023-04-30 18:54:04.042 +05:30 [INF] The user input is "string"
+2023-04-30 18:54:04.064 +05:30 [INF] The response for the get Banking is 0
+2023-04-30 18:54:04.067 +05:30 [INF] Inside Add-New-Customer-Details:CustomerService
+2023-04-30 18:59:22.733 +05:30 [ERR] The application failed
+Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\monica.a\source\repos\Banking\Banking\Program.cs:line 31
+2023-04-30 18:59:34.969 +05:30 [ERR] The application failed
+Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\monica.a\source\repos\Banking\Banking\Program.cs:line 31
+2023-04-30 19:00:29.473 +05:30 [ERR] The application failed
+Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\monica.a\source\repos\Banking\Banking\Program.cs:line 31
+2023-04-30 19:00:39.128 +05:30 [ERR] The application failed
+Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\monica.a\source\repos\Banking\Banking\Program.cs:line 31
+2023-04-30 19:01:01.793 +05:30 [ERR] The application failed
+Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\monica.a\source\repos\Banking\Banking\Program.cs:line 31
+2023-04-30 19:01:11.052 +05:30 [ERR] The application failed
+Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\monica.a\source\repos\Banking\Banking\Program.cs:line 31
+2023-04-30 19:01:21.998 +05:30 [ERR] The application failed
+Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\monica.a\source\repos\Banking\Banking\Program.cs:line 31
+2023-04-30 19:11:13.930 +05:30 [INF] Inside Add-New-Customer-Details:CustomerController
+2023-04-30 19:11:13.973 +05:30 [INF] Inside To-check-alphabets-First_name:CustomerService
+2023-04-30 19:11:14.126 +05:30 [INF] The user input is "string"
+2023-04-30 19:11:14.130 +05:30 [INF] The response for the get Banking is true
+2023-04-30 19:11:14.148 +05:30 [INF] Inside To-check-First_Name-Aadhar-exists:CustomerService
+2023-04-30 19:11:15.688 +05:30 [INF] The user input is "string"
+2023-04-30 19:11:15.691 +05:30 [INF] The user input is "string"
+2023-04-30 19:11:15.703 +05:30 [INF] The response for the get Banking is 0
+2023-04-30 19:11:15.706 +05:30 [INF] Inside Add-New-Customer-Details:CustomerService
+2023-04-30 19:15:42.174 +05:30 [ERR] The application failed
+Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\monica.a\source\repos\Banking\Banking\Program.cs:line 31
+2023-04-30 19:15:54.511 +05:30 [ERR] The application failed
+Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\monica.a\source\repos\Banking\Banking\Program.cs:line 31
+2023-04-30 19:18:45.057 +05:30 [ERR] The application failed
+Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\monica.a\source\repos\Banking\Banking\Program.cs:line 31
+2023-04-30 19:25:44.824 +05:30 [ERR] The application failed
+Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\monica.a\source\repos\Banking\Banking\Program.cs:line 31
+2023-04-30 20:02:25.066 +05:30 [ERR] The application failed
+Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\monica.a\source\repos\Banking\Banking\Program.cs:line 31
+2023-04-30 20:02:48.585 +05:30 [ERR] The application failed
+Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\monica.a\source\repos\Banking\Banking\Program.cs:line 31
+2023-04-30 20:03:07.736 +05:30 [ERR] The application failed
+Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\monica.a\source\repos\Banking\Banking\Program.cs:line 31
+2023-04-30 20:04:22.224 +05:30 [INF] Inside Add-New-Bank-Details:BankController
+2023-04-30 20:04:22.360 +05:30 [INF] Inside add-Bank-Details Method:BankService
+2023-04-30 20:04:25.703 +05:30 [INF] The response for the Add-New-Bank-Details is {"Bank_Name":"ICICI","Branch_Name":"string","IFSC":"string","Contact_Number":0,"Email":"string","Address1":"string","Address2":"string","city":"string","state":"string","Country":"string","pincode":"string"}
+2023-04-30 20:04:41.407 +05:30 [INF] Inside Add-New-BankLoan-Details:BankLoanController
+2023-04-30 20:04:41.413 +05:30 [INF] Inside Add-New-BankLoan-Details:BankLoanService
+2023-04-30 20:04:41.528 +05:30 [INF] The response for the Add-New-BankLoan-Details is {"Name":"jl","Interest_Rate":0.0,"Loan_Tenure":0}
+2023-04-30 20:05:09.635 +05:30 [INF] Inside Add-New-Cibil-Details:CibilController
+2023-04-30 20:05:09.640 +05:30 [INF] Inside Add-New-Cibil-Details:CibilService
+2023-04-30 20:05:09.707 +05:30 [INF] The response for the Add-New-Cibil-Details is {"Aadhar_Number":"ABCDEF56Y","CIBIL_year":"2023","CIBIL_Score":650.0}
+2023-04-30 20:05:28.108 +05:30 [INF] Inside Add-New-Loan-Details:LoanDetailsController
+2023-04-30 20:05:28.115 +05:30 [INF] Inside Add-New-Loan-Details:LoanDetailsService
+2023-04-30 20:05:28.297 +05:30 [INF] The response for the Add-New-Loan-Details is {"Loan_Amount":488888.0,"Loan_Provided":"2023-04-30T14:35:16.332Z","payment_Mode":"string","LoanID":[1]}
+2023-04-30 20:05:52.715 +05:30 [INF] Inside Add-New-Customer-Details:CustomerController
+2023-04-30 20:05:52.723 +05:30 [INF] Inside To-check-alphabets-First_name:CustomerService
+2023-04-30 20:05:52.731 +05:30 [INF] The user input is "kalai"
+2023-04-30 20:05:52.737 +05:30 [INF] The response for the get Banking is true
+2023-04-30 20:05:52.853 +05:30 [INF] Inside To-check-First_Name-Aadhar-exists:CustomerService
+2023-04-30 20:05:53.429 +05:30 [INF] The user input is "string"
+2023-04-30 20:05:53.432 +05:30 [INF] The user input is "kalai"
+2023-04-30 20:05:53.433 +05:30 [INF] The response for the get Banking is 0
+2023-04-30 20:05:53.437 +05:30 [INF] Inside Add-New-Customer-Details:CustomerService
+2023-04-30 20:05:53.566 +05:30 [INF] The response for the Add-New-Customer-Details is {"Id":0,"First_Name":"kalai","Last_Name":"string","DateOfBirth":"2023-04-30T14:35:37.226Z","age":0.0,"Mobile_Number":0,"Email":"string","Aadhar":"string","Address1":"string","Address2":"string","city":"string","state":"string","Country":"string","pincode":"string","Account_Number":"string","Account_Type":"string","loanDetailsId":[1],"BankId":[1]}
+2023-04-30 20:07:14.792 +05:30 [INF] Inside Add-New-Customer-Details:CustomerController
+2023-04-30 20:07:14.798 +05:30 [INF] Inside To-check-alphabets-First_name:CustomerService
+2023-04-30 20:07:14.803 +05:30 [INF] The user input is "kalaivani"
+2023-04-30 20:07:14.806 +05:30 [INF] The response for the get Banking is true
+2023-04-30 20:07:14.810 +05:30 [INF] Inside To-check-First_Name-Aadhar-exists:CustomerService
+2023-04-30 20:07:14.832 +05:30 [INF] The user input is "ABCDEF56Y"
+2023-04-30 20:07:14.836 +05:30 [INF] The user input is "kalaivani"
+2023-04-30 20:07:14.838 +05:30 [INF] The response for the get Banking is 0
+2023-04-30 20:07:14.839 +05:30 [INF] Inside Add-New-Customer-Details:CustomerService
+2023-04-30 20:07:14.912 +05:30 [INF] The response for the Add-New-Customer-Details is {"Id":0,"First_Name":"kalaivani","Last_Name":"string","DateOfBirth":"2023-04-30T14:35:37.226Z","age":0.0,"Mobile_Number":0,"Email":"string","Aadhar":"ABCDEF56Y","Address1":"string","Address2":"string","city":"string","state":"string","Country":"string","pincode":"string","Account_Number":"string","Account_Type":"string","loanDetailsId":[1],"BankId":[1]}
+2023-04-30 20:08:25.275 +05:30 [INF] Inside Get-Customer-Details-By-Account-Number-First-Name-Aadhar:CustomerController
+2023-04-30 20:08:25.283 +05:30 [INF] Inside Get-Customer-Details-by-Account_number-First_name-Aadhar:CustomerService
+2023-04-30 20:08:25.862 +05:30 [INF] The user input for Get-Customer-Details-by-Account_number is null
+2023-04-30 20:08:25.864 +05:30 [INF] The user input for Get-Customer-Details-by-First-Name is "kalai"
+2023-04-30 20:08:25.869 +05:30 [INF] The user input for Get-Customer-Details-by-Aadhar is null
+2023-04-30 20:08:25.881 +05:30 [INF] The response for the Get-Customer-Details-By-Account-Number-First-Name-Aadhar is [{"Id":1,"First_Name":"kalai","Last_Name":"string","DateOfBirth":"2023-04-30T14:35:37.226","age":0.0,"Mobile_Number":0,"Email":"string","Aadhar":"string","Address1":"string","Address2":"string","city":"string","state":"string","Country":"string","pincode":"string","Account_Number":"string","Account_Type":"string","loanDetails":[],"Bank_Details":["string"]}]
+2023-04-30 20:08:38.110 +05:30 [INF] Inside Get-Customer-Details-By-Account-Number-First-Name-Aadhar:CustomerController
+2023-04-30 20:08:38.113 +05:30 [INF] Inside Get-Customer-Details-by-Account_number-First_name-Aadhar:CustomerService
+2023-04-30 20:08:38.176 +05:30 [INF] The user input for Get-Customer-Details-by-Account_number is "ABCDEF56Y"
+2023-04-30 20:08:38.181 +05:30 [INF] The user input for Get-Customer-Details-by-First-Name is null
+2023-04-30 20:08:38.182 +05:30 [INF] The user input for Get-Customer-Details-by-Aadhar is null
+2023-04-30 20:08:38.183 +05:30 [INF] The response for the Get-Customer-Details-By-Account-Number-First-Name-Aadhar is []
+2023-04-30 20:08:58.007 +05:30 [INF] Inside Get-Customer-Details-By-Account-Number-First-Name-Aadhar:CustomerController
+2023-04-30 20:08:58.009 +05:30 [INF] Inside Get-Customer-Details-by-Account_number-First_name-Aadhar:CustomerService
+2023-04-30 20:08:58.072 +05:30 [INF] The user input for Get-Customer-Details-by-Account_number is "ABCDEF56Y"
+2023-04-30 20:08:58.077 +05:30 [INF] The user input for Get-Customer-Details-by-First-Name is "kalaivani"
+2023-04-30 20:08:58.081 +05:30 [INF] The user input for Get-Customer-Details-by-Aadhar is null
+2023-04-30 20:08:58.084 +05:30 [INF] The response for the Get-Customer-Details-By-Account-Number-First-Name-Aadhar is [{"Id":2,"First_Name":"kalaivani","Last_Name":"string","DateOfBirth":"2023-04-30T14:35:37.226","age":0.0,"Mobile_Number":0,"Email":"string","Aadhar":"ABCDEF56Y","Address1":"string","Address2":"string","city":"string","state":"string","Country":"string","pincode":"string","Account_Number":"string","Account_Type":"string","loanDetails":[1],"Bank_Details":["string"]}]
+2023-04-30 20:09:27.570 +05:30 [INF] Inside Get-Customer-Details-By-Account-Number-First-Name-Aadhar:CustomerController
+2023-04-30 20:09:27.572 +05:30 [INF] Inside Get-Customer-Details-by-Account_number-First_name-Aadhar:CustomerService
+2023-04-30 20:09:27.635 +05:30 [INF] The user input for Get-Customer-Details-by-Account_number is null
+2023-04-30 20:09:27.641 +05:30 [INF] The user input for Get-Customer-Details-by-First-Name is "kalaivani"
+2023-04-30 20:09:27.644 +05:30 [INF] The user input for Get-Customer-Details-by-Aadhar is "ABCDEF56Y"
+2023-04-30 20:09:27.646 +05:30 [INF] The response for the Get-Customer-Details-By-Account-Number-First-Name-Aadhar is [{"Id":2,"First_Name":"kalaivani","Last_Name":"string","DateOfBirth":"2023-04-30T14:35:37.226","age":0.0,"Mobile_Number":0,"Email":"string","Aadhar":"ABCDEF56Y","Address1":"string","Address2":"string","city":"string","state":"string","Country":"string","pincode":"string","Account_Number":"string","Account_Type":"string","loanDetails":[1],"Bank_Details":["string"]}]
+2023-04-30 20:09:43.987 +05:30 [INF] Inside Get-Customer-Details-By-Account-Number-First-Name-Aadhar:CustomerController
+2023-04-30 20:09:43.999 +05:30 [INF] Inside Get-Customer-Details-by-Account_number-First_name-Aadhar:CustomerService
+2023-04-30 20:09:44.061 +05:30 [INF] The user input for Get-Customer-Details-by-Account_number is null
+2023-04-30 20:09:44.065 +05:30 [INF] The user input for Get-Customer-Details-by-First-Name is "kalai"
+2023-04-30 20:09:44.068 +05:30 [INF] The user input for Get-Customer-Details-by-Aadhar is null
+2023-04-30 20:09:44.072 +05:30 [INF] The response for the Get-Customer-Details-By-Account-Number-First-Name-Aadhar is [{"Id":1,"First_Name":"kalai","Last_Name":"string","DateOfBirth":"2023-04-30T14:35:37.226","age":0.0,"Mobile_Number":0,"Email":"string","Aadhar":"string","Address1":"string","Address2":"string","city":"string","state":"string","Country":"string","pincode":"string","Account_Number":"string","Account_Type":"string","loanDetails":[],"Bank_Details":["string"]}]

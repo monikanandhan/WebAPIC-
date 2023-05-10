@@ -11,7 +11,7 @@
 
     public class LoanByNameVM
     {
-        public int id { get;set; }
+        public int id { get; set; }
         public string Name { get; set; }
         public float Interest_Rate { get; set; }
         public int Loan_Tenure { get; set; }
@@ -22,8 +22,6 @@
         public int id { get; set; }
         public string Name { get; set; }
         public List<CustomerDetailsVM> Details { get; set; }
-        
-
-
     }
 }
+

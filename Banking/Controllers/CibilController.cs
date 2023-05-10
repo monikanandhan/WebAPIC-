@@ -21,48 +21,48 @@ namespace Banking.Controllers
         }
 
 
-        [HttpPost]
-        public IActionResult AddNewCibil(CibilVM cibil)
+        [HttpPost("Add-New-Cibil-Details")]
+        public IActionResult AddNewCibil(CibilNoId cibil)
         {
             Log.Information("Inside Add-New-Cibil-Details:{@Controller}", GetType().Name);
             service.AddNewCibil(cibil);
-            Log.Information($"The response for the get Banking is {JsonConvert.SerializeObject(cibil)}");
+            Log.Information($"The response for the Add-New-Cibil-Details is {JsonConvert.SerializeObject(cibil)}");
             return Ok(cibil);
         }
 
-        [HttpGet]
+        [HttpGet("Get-All-Cibil-Details")]
         public IActionResult GetAllCibil()
         {
             Log.Information("Inside Get-all-Cibil-Details:{@Controller}", GetType().Name);
-            var result = service.GetAllCibil();
-            Log.Information($"The response for the get Banking is {JsonConvert.SerializeObject(result)}");
-            return Ok(result);
+            var GetAllCibil = service.GetAllCibil();
+            Log.Information($"The response for the Get-all-Cibil-Details is {JsonConvert.SerializeObject(GetAllCibil)}");
+            return Ok(GetAllCibil);
         }
 
-        [HttpGet("{id}")]
-        public IActionResult GetBankByCustomerID(int id)
+        [HttpGet("Get-Cibil-Details-By-Aadhar/{Aadhar}")]
+        public IActionResult GetCibilByCustomerID(string Aadhar)
         {
-            Log.Information("Inside Get-Cibil-Details-by-id:{@Controller}", GetType().Name);
-            var result = service.GetCibilbyCustomerid(id);
-            Log.Information($"The response for the get Banking is {JsonConvert.SerializeObject(result)}");
-            return Ok(result);
+            Log.Information("Inside Get-Cibil-Details-by-Aadhar:{@Controller}", GetType().Name);
+            var GetCibilById = service.GetCibilbyCustomerAadhar(Aadhar);
+            Log.Information($"The response for the Get-Cibil-Details-by-Aadhar is {JsonConvert.SerializeObject(GetCibilById)}");
+            return Ok(GetCibilById);
         }
 
-        [HttpPut("{Id}")]
-        public IActionResult UpdateCibil(int Id, CibilVM cibil)
+        [HttpPut("Update-Cibil-Details-By-Aadhar/{Aadhar}")]
+        public IActionResult UpdateCibil(string Aadhar, CibilNoId cibil)
         {
             Log.Information("Inside update-Cibil-Details-By-id:{@Controller}", GetType().Name);
-            var result = service.UpdateCibilDetails(Id, cibil);
-            Log.Information($"The response for the get Banking is {JsonConvert.SerializeObject(result)}");
-            return Ok(result);
+            var UpdateCibil = service.UpdateCibilDetails(Aadhar, cibil);
+            Log.Information($"The response for the update-Cibil-Details-By-id is {JsonConvert.SerializeObject(UpdateCibil)}");
+            return Ok(UpdateCibil);
         }
 
-        [HttpDelete("{Id}")]
-        public IActionResult DeleteBank(int Id)
+        [HttpDelete(" Delete-Cibil-Details-By-Aadhar/{Aadhar}")]
+        public IActionResult DeleteBank(string Aadhar,int id)
         {
-            Log.Information("Inside Delet-Cibil-Details-By-Id:{@Controller}", GetType().Name);
-            var result=service.DeleteCibil(Id);
-            Log.Information($"The response for the get Banking is {JsonConvert.SerializeObject(result)}");
+            Log.Information("Inside Delete-Cibil-Details-By-Customer-Id:{@Controller}", GetType().Name);
+            var DeleteCibil=service.DeleteCibil(Aadhar,id);
+            Log.Information($"The response for the Delete-Cibil-Details-By-Customer-Id is {JsonConvert.SerializeObject(DeleteCibil)}");
             return Ok();
         }
     }

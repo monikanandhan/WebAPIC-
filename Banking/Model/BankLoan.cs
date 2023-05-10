@@ -10,6 +10,7 @@ namespace Banking.Model
         public float Interest_Rate { get; set; }
         public int Loan_Tenure { get; set; }
        
+        //Navigation Properties
         public List<Loan_Loandetails> loan_loanDetails { get; set; }
       
         public List<Customer_Bank> customer_Banks { get; set; }

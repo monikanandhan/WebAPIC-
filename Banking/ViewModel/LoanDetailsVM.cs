@@ -18,20 +18,26 @@ namespace Banking.ViewModel
         public float Loan_Amount { get; set; }
         public DateTime Loan_Provided { get; set; }
         public string payment_Mode { get; set; }
-
         public List<string> bankLoans { get; set; }   
        
     }
 
     public class LoanDetailsonly
     {
-        public int id { get; set; }
+      
+        public float Loan_Amount { get; set; }
+        public DateTime Loan_Provided { get; set; }
+        public string payment_Mode { get; set; }
+    }
+    public class LoanDetailsNoIdVM
+    {
+       
         public float Loan_Amount { get; set; }
         public DateTime Loan_Provided { get; set; }
         public string payment_Mode { get; set; }
 
-       
 
+        public List<int> LoanID { get; set; }
     }
 
 

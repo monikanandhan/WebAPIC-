@@ -62,7 +62,7 @@ namespace Banking.Service
                 Loan_Tenure = x.Loan_Tenure
             }).ToList();
             Context.SaveChanges();
-            Log.Information($"The user input is {JsonConvert.SerializeObject(Name)}");
+            Log.Information($"The user input for Get-BankLoan-Details-By-Name is {JsonConvert.SerializeObject(Name)}");
             return GetLoan;
 
         }
@@ -92,15 +92,15 @@ namespace Banking.Service
                 updateLoan.Loan_Tenure = loan.Loan_Tenure;  
             }
             Context.SaveChanges();
-            Log.Information($"The user input is {JsonConvert.SerializeObject(id)}");
+            Log.Information($"The user input for update-BankLoan-Details-By-id is {JsonConvert.SerializeObject(id)}");
             return updateLoan;
         }
 
         public BankLoan DeleteLoan(int id)
         {
-            Log.Information("Inside Delet-BankLoan-Details-By-Id:{@Controller}", GetType().Name);
+            Log.Information("Inside Delete-BankLoan-Details-By-Id:{@Controller}", GetType().Name);
             var DeleteLoan = Context.bankloan.FirstOrDefault(x => x.Id == id);
-            Log.Information($"The user input is {JsonConvert.SerializeObject(id)}");
+            Log.Information($"The user input for Delete-BankLoan-Details-By-Id  is {JsonConvert.SerializeObject(id)}");
             if (DeleteLoan != null)
             {
                 Context.bankloan.Remove(DeleteLoan);

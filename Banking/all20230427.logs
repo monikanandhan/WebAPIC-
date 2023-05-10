@@ -1,0 +1,192 @@
+2023-04-27 12:33:00.039 +05:30 [ERR] The application failed
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: Banking.Service.BankService Lifetime: Transient ImplementationType: Banking.Service.BankService': Unable to activate type 'Banking.Model.BankingDbContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Banking.Model.BankingDbContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)) (Error while validating the service descriptor 'ServiceType: Banking.Service.BankLoanService Lifetime: Transient ImplementationType: Banking.Service.BankLoanService': Unable to activate type 'Banking.Model.BankingDbContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Banking.Model.BankingDbContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)) (Error while validating the service descriptor 'ServiceType: Banking.Service.CibilService Lifetime: Transient ImplementationType: Banking.Service.CibilService': Unable to activate type 'Banking.Model.BankingDbContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Banking.Model.BankingDbContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)) (Error while validating the service descriptor 'ServiceType: Banking.Service.CustomerService Lifetime: Transient ImplementationType: Banking.Service.CustomerService': Unable to activate type 'Banking.Model.BankingDbContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Banking.Model.BankingDbContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)) (Error while validating the service descriptor 'ServiceType: Banking.Service.LoanDetailsService Lifetime: Transient ImplementationType: Banking.Service.LoanDetailsService': Unable to activate type 'Banking.Model.BankingDbContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Banking.Model.BankingDbContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)) (Error while validating the service descriptor 'ServiceType: Banking.Model.BankingDbContext Lifetime: Scoped ImplementationType: Banking.Model.BankingDbContext': Unable to activate type 'Banking.Model.BankingDbContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Banking.Model.BankingDbContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions))
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Banking.Service.BankService Lifetime: Transient ImplementationType: Banking.Service.BankService': Unable to activate type 'Banking.Model.BankingDbContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Banking.Model.BankingDbContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)
+ ---> System.InvalidOperationException: Unable to activate type 'Banking.Model.BankingDbContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Banking.Model.BankingDbContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\monica.a\source\repos\Banking\Banking\Program.cs:line 31
+ ---> (Inner Exception #1) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Banking.Service.BankLoanService Lifetime: Transient ImplementationType: Banking.Service.BankLoanService': Unable to activate type 'Banking.Model.BankingDbContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Banking.Model.BankingDbContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)
+ ---> System.InvalidOperationException: Unable to activate type 'Banking.Model.BankingDbContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Banking.Model.BankingDbContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #2) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Banking.Service.CibilService Lifetime: Transient ImplementationType: Banking.Service.CibilService': Unable to activate type 'Banking.Model.BankingDbContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Banking.Model.BankingDbContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)
+ ---> System.InvalidOperationException: Unable to activate type 'Banking.Model.BankingDbContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Banking.Model.BankingDbContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #3) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Banking.Service.CustomerService Lifetime: Transient ImplementationType: Banking.Service.CustomerService': Unable to activate type 'Banking.Model.BankingDbContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Banking.Model.BankingDbContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)
+ ---> System.InvalidOperationException: Unable to activate type 'Banking.Model.BankingDbContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Banking.Model.BankingDbContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #4) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Banking.Service.LoanDetailsService Lifetime: Transient ImplementationType: Banking.Service.LoanDetailsService': Unable to activate type 'Banking.Model.BankingDbContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Banking.Model.BankingDbContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)
+ ---> System.InvalidOperationException: Unable to activate type 'Banking.Model.BankingDbContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Banking.Model.BankingDbContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+ ---> (Inner Exception #5) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Banking.Model.BankingDbContext Lifetime: Scoped ImplementationType: Banking.Model.BankingDbContext': Unable to activate type 'Banking.Model.BankingDbContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Banking.Model.BankingDbContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)
+ ---> System.InvalidOperationException: Unable to activate type 'Banking.Model.BankingDbContext'. The following constructors are ambiguous:
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1[Banking.Model.BankingDbContext])
+Void .ctor(Microsoft.EntityFrameworkCore.DbContextOptions)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+2023-04-27 12:39:03.103 +05:30 [INF] Inside Get-Customer-Details-by-id:CustomerController
+2023-04-27 12:39:03.261 +05:30 [INF] Inside Get-Customer-Details-by-id:CustomerService
+2023-04-27 12:39:09.150 +05:30 [INF] The user input for Get-Customer-Details-by-Id is 1
+2023-04-27 12:39:09.315 +05:30 [INF] The response for the Get-Customer-Details-by-id is {"Id":1,"First_Name":"kalai","Last_Name":"vani","DateOfBirth":"1995-04-12T09:44:24.547","age":28.0,"Mobile_Number":9080592602,"Email":"kalai@gmail.com","Aadhar":"EPNPM9959C","Address1":"perundurai","Address2":"perundurai","city":"perundurai","state":"Tamilnadu","Country":"India","pincode":"641302","Account_Number":"343501513698","Account_Type":"savings","loanDetails":[1,3],"Bank_Details":["ICIC0001221","HDfc000A32"]}
+2023-04-27 14:31:22.584 +05:30 [INF] Inside Add-New-Customer-Details:CustomerController
+2023-04-27 14:31:22.721 +05:30 [INF] Inside To-check-alphabets-First_name:CustomerService
+2023-04-27 14:31:23.019 +05:30 [INF] The user input is "string"
+2023-04-27 14:31:23.030 +05:30 [INF] The response for the get Banking is true
+2023-04-27 14:31:23.054 +05:30 [INF] Inside To-check-First_Name-Aadhar-exists:CustomerService
+2023-04-27 14:31:27.705 +05:30 [INF] The user input is "string"
+2023-04-27 14:31:27.709 +05:30 [INF] The user input is "string"
+2023-04-27 14:31:27.744 +05:30 [INF] The response for the get Banking is 0
+2023-04-27 14:32:13.394 +05:30 [INF] Inside Add-New-Customer-Details:CustomerService
+2023-04-27 14:34:28.054 +05:30 [INF] Inside Add-New-Customer-Details:CustomerController
+2023-04-27 14:34:28.176 +05:30 [INF] Inside To-check-alphabets-First_name:CustomerService
+2023-04-27 14:34:28.478 +05:30 [INF] The user input is "string"
+2023-04-27 14:34:28.488 +05:30 [INF] The response for the get Banking is true
+2023-04-27 14:34:28.514 +05:30 [INF] Inside To-check-First_Name-Aadhar-exists:CustomerService
+2023-04-27 14:34:33.133 +05:30 [INF] The user input is "string"
+2023-04-27 14:34:33.137 +05:30 [INF] The user input is "string"
+2023-04-27 14:34:33.177 +05:30 [INF] The response for the get Banking is 0
+2023-04-27 14:34:43.812 +05:30 [INF] Inside Add-New-Customer-Details:CustomerService
+2023-04-27 14:58:13.899 +05:30 [INF] Inside Add-New-Customer-Details:CustomerController
+2023-04-27 14:58:14.033 +05:30 [INF] Inside To-check-alphabets-First_name:CustomerService
+2023-04-27 14:58:14.349 +05:30 [INF] The user input is "string"
+2023-04-27 14:58:14.359 +05:30 [INF] The response for the get Banking is true
+2023-04-27 14:58:14.388 +05:30 [INF] Inside To-check-First_Name-Aadhar-exists:CustomerService
+2023-04-27 14:58:19.023 +05:30 [INF] The user input is "string"
+2023-04-27 14:58:19.026 +05:30 [INF] The user input is "string"
+2023-04-27 14:58:19.062 +05:30 [INF] The response for the get Banking is 0
+2023-04-27 14:58:19.069 +05:30 [INF] Inside Add-New-Customer-Details:CustomerService
+2023-04-27 16:55:38.091 +05:30 [INF] Inside Add-New-Customer-Details:CustomerController
+2023-04-27 16:55:38.136 +05:30 [INF] Inside To-check-alphabets-First_name:CustomerService
+2023-04-27 16:55:38.247 +05:30 [INF] The user input is "string"
+2023-04-27 16:55:38.250 +05:30 [INF] The response for the get Banking is true
+2023-04-27 16:55:38.260 +05:30 [INF] Inside To-check-First_Name-Aadhar-exists:CustomerService
+2023-04-27 16:55:39.745 +05:30 [INF] The user input is "string"
+2023-04-27 16:55:39.747 +05:30 [INF] The user input is "string"
+2023-04-27 16:55:39.757 +05:30 [INF] The response for the get Banking is 0
+2023-04-27 16:55:39.759 +05:30 [INF] Inside Add-New-Customer-Details:CustomerService
+2023-04-27 16:55:40.120 +05:30 [INF] The response for the Add-New-Customer-Details is {"Id":0,"First_Name":"string","Last_Name":"string","DateOfBirth":"2023-04-27T11:25:24.957Z","age":0.0,"Mobile_Number":0,"Email":"string","Aadhar":"string","Address1":"string","Address2":"string","city":"string","state":"string","Country":"string","pincode":"string","Account_Number":"string","Account_Type":"string","loanDetailsId":[1],"BankId":[1]}
+2023-04-27 17:14:26.308 +05:30 [INF] Inside Add-New-Customer-Details:CustomerController
+2023-04-27 17:14:26.410 +05:30 [INF] Inside To-check-alphabets-First_name:CustomerService
+2023-04-27 17:14:26.609 +05:30 [INF] The user input is "string"
+2023-04-27 17:14:26.613 +05:30 [INF] The response for the get Banking is true
+2023-04-27 17:14:26.629 +05:30 [INF] Inside To-check-First_Name-Aadhar-exists:CustomerService
+2023-04-27 17:14:29.329 +05:30 [INF] The user input is "string"
+2023-04-27 17:14:29.331 +05:30 [INF] The user input is "string"
+2023-04-27 17:14:29.347 +05:30 [INF] The response for the get Banking is 0
+2023-04-27 17:14:29.348 +05:30 [INF] Inside Add-New-Customer-Details:CustomerService
+2023-04-27 17:14:30.032 +05:30 [INF] The response for the Add-New-Customer-Details is {"Id":0,"First_Name":"string","Last_Name":"string","DateOfBirth":"2023-04-27T11:44:14.493Z","age":0.0,"Mobile_Number":0,"Email":"string","Aadhar":"string","Address1":"string","Address2":"string","city":"string","state":"string","Country":"string","pincode":"string","Account_Number":"string","Account_Type":"string","loanDetailsId":[1],"BankId":[1]}
+2023-04-27 17:22:27.380 +05:30 [INF] Inside Add-New-Customer-Details:CustomerController
+2023-04-27 17:22:27.449 +05:30 [INF] Inside To-check-alphabets-First_name:CustomerService
+2023-04-27 17:22:27.631 +05:30 [INF] The user input is "string"
+2023-04-27 17:22:27.636 +05:30 [INF] The response for the get Banking is true
+2023-04-27 17:22:27.648 +05:30 [INF] Inside To-check-First_Name-Aadhar-exists:CustomerService
+2023-04-27 17:22:30.351 +05:30 [INF] The user input is "string"
+2023-04-27 17:22:30.351 +05:30 [INF] The user input is "string"
+2023-04-27 17:22:30.367 +05:30 [INF] The response for the get Banking is 0
+2023-04-27 17:22:30.370 +05:30 [INF] Inside Add-New-Customer-Details:CustomerService
+2023-04-27 17:22:31.068 +05:30 [INF] The response for the Add-New-Customer-Details is {"Id":0,"First_Name":"string","Last_Name":"string","DateOfBirth":"2023-04-27T11:52:17.963Z","age":0.0,"Mobile_Number":0,"Email":"string","Aadhar":"string","Address1":"string","Address2":"string","city":"string","state":"string","Country":"string","pincode":"string","Account_Number":"string","Account_Type":"string","loanDetailsId":[1],"BankId":[1]}

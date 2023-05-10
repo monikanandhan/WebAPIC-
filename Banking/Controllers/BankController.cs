@@ -22,22 +22,22 @@ namespace Banking.Controllers
 
        
 
-        [HttpPost]
-        public IActionResult AddNewBank(BankByNameVM bank)
+        [HttpPost("Add-New-Bank-Details")]
+        public IActionResult AddNewBank(BankListVM bank)
         {
             Log.Information("Inside Add-New-Bank-Details:{@Controller}",  GetType().Name);
             service.AddNewBankDetails(bank);
-            Log.Information($"The response for the get Banking is {JsonConvert.SerializeObject(bank)}");
+            Log.Information($"The response for the Add-New-Bank-Details is {JsonConvert.SerializeObject(bank)}");
             return Ok(bank);
         }
 
-        [HttpGet]
+        [HttpGet("Get-All-Bank-Details")]
         public IActionResult GetAllBank()
         {
             Log.Information("Inside Get-All-Bank-Details:{@Controller}",GetType().Name);
-            var result = service.GetAllBanks();
-            Log.Information($"The response for the get Banking is {JsonConvert.SerializeObject(result)}");
-            return Ok(result);
+            var GetAllBank = service.GetAllBanks();
+            Log.Information($"The response for the Get-All-Bank-Details is {JsonConvert.SerializeObject(GetAllBank)}");
+            return Ok(GetAllBank);
         }
 
         //[HttpGet("{Bank_Name}")]
@@ -48,33 +48,31 @@ namespace Banking.Controllers
         //}
 
 
-        [HttpGet("{Bank_Name}")]
+        [HttpGet("Get-Bank-Details-By-Bank-Name/{Bank_Name}")]
         public IActionResult GetBankByName(string Bank_Name)
         {
             Log.Information("Inside Get-Bank-Details-By-Name Method:{@Controller}", GetType().Name);
-            var result = service.GetBankWithCustomer(Bank_Name);
-            Log.Information($"The response for the get Banking is {JsonConvert.SerializeObject(result)}");
-            return Ok(result);
+            var GetBankByName = service.GetBankWithCustomer(Bank_Name);
+            Log.Information($"The response for the Get-Bank-Details-By-Name  is {JsonConvert.SerializeObject(GetBankByName)}");
+            return Ok(GetBankByName);
         }
 
 
-
-
-        [HttpPut("{IFSC}")]
+        [HttpPut("Update-Bank-Details-By-IFSC/{IFSC}")]
         public IActionResult UpdatBank(string IFSC, BankByNameVM bank)
         {
             Log.Information("Inside Update-All-Bank-Details-By-ID Method:{@Controller}", GetType().Name);
-            var result = service.UpdateBank(IFSC,bank);
-            Log.Information($"The response for the get Banking is {JsonConvert.SerializeObject(result)}");
-            return Ok(result);
+            var UpdateBank = service.UpdateBank(IFSC,bank);
+            Log.Information($"The response for the Update-All-Bank-Details-By-ID is {JsonConvert.SerializeObject(UpdateBank)}");
+            return Ok(UpdateBank);
         }
 
-        [HttpDelete("{IFSC}")]
+        [HttpDelete("Delete-Bank-Details-By-IFSC/{IFSC}")]
         public IActionResult DeleteBank(string IFSC) 
         {
             Log.Information("Inside Delete-Bank-Details Method:{Controller}", GetType().Name);
-            var result=service.DeleteByIFSC(IFSC);
-            Log.Information($"The response for the get Banking is {JsonConvert.SerializeObject(result)}");
+            var DeleteBank=service.DeleteByIFSC(IFSC);
+            Log.Information($"The response for the Delete-Bank-Details is {JsonConvert.SerializeObject(DeleteBank)}");
             return Ok();
         }
     }

@@ -11,13 +11,7 @@ namespace Banking.Model
         public string payment_Mode { get; set; }
 
         //Navigation Properties
-
-
-        //public List<BankLoan> loans { get; set; }
-        //public List<Cibil> cibils { get; set; }
-        
-        public List<Customer_LoanDetails> loanDetailsCusList { get; set; }
-      
+        public List<Customer_LoanDetails> loanDetailsCusList { get; set; }     
         public List<Loan_Loandetails> loan_loanDetails { get; set; }
     }
 }

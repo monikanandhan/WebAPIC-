@@ -25,24 +25,24 @@ namespace Banking.Controllers
         //[HttpPost]
         //public IActionResult AddNewCustomer(CustomerVM customer)
         //{
-        //Log.Information("Inside Add-New-Customer-Details:{@Controller}", GetType().Name);
-        //        service.AddCustomerDetails(customer);
-        //        Log.Information($"The response for the get Banking is {JsonConvert.SerializeObject(customer)}");
-        //        return Ok(customer);
+        //    Log.Information("Inside Add-New-Customer-Details:{@Controller}", GetType().Name);
+        //    service.AddCustomerDetails(customer);
+        //    Log.Information($"The response for the get Banking is {JsonConvert.SerializeObject(customer)}");
+        //    return Ok(customer);
 
         //}
 
 
-        //[HttpGet]
+        //[HttpGet("Get-Customer-Details")]
         //public IActionResult GetAllCustomer()
         //{
-        //Log.Information("Inside Add-New-Customer-Details:{@Controller}", GetType().Name);
-        //    var result = service.GetallCustomer();
-      //  Log.Information($"The response for the get Banking is {JsonConvert.SerializeObject(result)}");
-        //    return Ok(result);
+        //    Log.Information("Inside Get-Customer-Details:{@Controller}", GetType().Name);
+        //    var GetAll = service.GetallCustomer();
+        //    Log.Information($"The response for the get Banking is {JsonConvert.SerializeObject(GetAll)}");
+        //    return Ok(GetAll);
         //}
 
-        [HttpPost]
+        [HttpPost("Add-New-Customer-Details")]
         public IActionResult AddNewCustomer(CustomerVM customer)
         {
             //DateTime dateValue;
@@ -55,7 +55,7 @@ namespace Banking.Controllers
                 if (service.TocheckFirstNameAadhar(customer.First_Name, customer.Aadhar) > 0)
                 {
 
-                    Log.Information($"The response for the get Banking is {JsonConvert.SerializeObject("user already exists")}");
+                    Log.Information($"The response for the Add-New-Customer-Details is {JsonConvert.SerializeObject("user already exists")}");
                     return NotFound("user already exists");  
                 }
                 else 
@@ -63,7 +63,7 @@ namespace Banking.Controllers
                 //DateTimeStyles.None,out dateValue))==true)
                 {
                     service.AddCustomerDetails(customer);
-                    Log.Information($"The response for the get Banking is {JsonConvert.SerializeObject(customer)}");
+                    Log.Information($"The response for the Add-New-Customer-Details is {JsonConvert.SerializeObject(customer)}");
                     return Ok(customer);
                 }
                 //else
@@ -78,42 +78,42 @@ namespace Banking.Controllers
             }
         }
 
-        
 
-        [HttpGet]
+
+        [HttpGet("Get-Customer-Details-By-Account-Number-First-Name-Aadhar")]
         public IActionResult GetCustomer(string? Account_number, string? First_Name, string? Aadhar)
         {
-            Log.Information("Inside Get-all-Customer-Details:{@Controller}", GetType().Name);
-            var result = service.GetCustomer(Account_number, First_Name, Aadhar);
-            Log.Information($"The response for the get Banking is {JsonConvert.SerializeObject(result)}");
-            return Ok(result);
+            Log.Information("Inside Get-Customer-Details-By-Account-Number-First-Name-Aadhar:{@Controller}", GetType().Name);
+            var GetCustomer = service.GetCustomer(Account_number, First_Name, Aadhar);
+            Log.Information($"The response for the Get-Customer-Details-By-Account-Number-First-Name-Aadhar is {JsonConvert.SerializeObject(GetCustomer)}");
+            return Ok(GetCustomer);
         }
 
 
-        [HttpGet("{id}")]
+        [HttpGet("Get-Customer-Details-By-Id/{id}")]
         public IActionResult GetCustomerWithId(int id)
         {
             Log.Information("Inside Get-Customer-Details-by-id:{@Controller}", GetType().Name);
-            var result = service.GetCustomerWithID(id);
-            Log.Information($"The response for the get Banking is {JsonConvert.SerializeObject(result)}");
-            return Ok(result);
+            var GetCustomerById = service.GetCustomerWithID(id);
+            Log.Information($"The response for the Get-Customer-Details-by-id is {JsonConvert.SerializeObject(GetCustomerById)}");
+            return Ok(GetCustomerById);
         }
 
-        [HttpPut("{id}")]
-        public IActionResult PutCustomer(int id, CustomerDetailsVM customer)
+        [HttpPut("Update-Customer-Details-By- Account_Number/{ Account_Number}")]
+        public IActionResult PutCustomer(string Account_Number, CustomerDetailsVM customer)
         {
             Log.Information("Inside update-Customer-Details-By-id:{@Controller}", GetType().Name);
-            var result = service.UpdateCustomer(id, customer);
-            Log.Information($"The response for the get Banking is {JsonConvert.SerializeObject(result)}");
-            return Ok(result);
+            var UpdateCustomer = service.UpdateCustomer(Account_Number, customer);
+            Log.Information($"The response for the update-Customer-Details-By-id is {JsonConvert.SerializeObject(UpdateCustomer)}");
+            return Ok(UpdateCustomer);
         }
 
-        [HttpDelete("{id}")]
-        public IActionResult DeleteCustomer(int id)
+        [HttpDelete("Delete-Customer-Details-By- Account_Number/{ Account_Number}")]
+        public IActionResult DeleteCustomer(string Account_Number)
         {
-            Log.Information("Inside Delet-Customer-Details-By-Id:{@Controller}", GetType().Name);
-            var result=service.DeleteCustomerById(id);
-            Log.Information($"The response for the get Banking is {JsonConvert.SerializeObject(result)}");
+            Log.Information("Inside Delete-Customer-Details-By-Id:{@Controller}", GetType().Name);
+            var DeleteCustomer =service.DeleteCustomerById(Account_Number);
+            Log.Information($"The response for the Delete-Customer-Details-By-Id is {JsonConvert.SerializeObject(DeleteCustomer)}");
             return Ok();
         }
     }

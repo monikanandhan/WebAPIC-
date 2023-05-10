@@ -28,9 +28,7 @@ namespace Banking.ViewModel
         public string Account_Number { get; set; }
         public string Account_Type { get; set; }
         public List<int> loanDetailsId { get; set; }
-        
         public List<int> BankId { get; set; }
-
     }
     public class CustomerWithLoanDetailsVM
     {
@@ -64,7 +62,7 @@ namespace Banking.ViewModel
     public class CustomerDetailsVM
     {
 
-        public int Id { get; set; }
+       
         [Required]
         public string First_Name { get; set; }
         public string Last_Name { get; set; }

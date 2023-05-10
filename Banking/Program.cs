@@ -24,7 +24,8 @@ try
     builder.Services.AddTransient<CibilService>();
     builder.Services.AddTransient<CustomerService>();
     builder.Services.AddTransient<LoanDetailsService>();
-    builder.Services.AddDbContext<BankingDbContext>(options => options.UseMySQL(builder.Configuration.GetConnectionString("DC")));
+    //builder.Services.AddDbContext<BankingDbContext>(options => options.UseMySQL(builder.Configuration.GetConnectionString("DC")));
+    builder.Services.AddDbContext<BankingDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DC")));
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();

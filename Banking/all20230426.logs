@@ -1,0 +1,185 @@
+2023-04-26 15:00:58.290 +05:30 [INF] Inside Add-New-Bank-Details:BankController
+2023-04-26 15:00:58.407 +05:30 [INF] Inside add-Bank-Details Method:BankService
+2023-04-26 15:01:03.689 +05:30 [INF] The response for the Add-New-Bank-Details is {"Id":8,"Bank_Name":"IDFC","Branch_Name":"erode","IFSC":"IDFC0001221","Contact_Number":9090998888,"Email":"IDFC@gmail.com","Address1":"salem","Address2":"salem","city":"salem","state":"TamilNadu","Country":"India","pincode":"638451"}
+2023-04-26 15:01:20.132 +05:30 [INF] Inside Get-All-Bank-Details:BankController
+2023-04-26 15:01:21.535 +05:30 [INF] The response for the Get-All-Bank-Details is [{"Id":1,"Bank_Name":"ICICI","Branch_Name":"perundurai","IFSC":"ICIC0001551","Contact_Number":9080592602,"Email":"iciciperu@gmail.com","Address1":"perundurai","Address2":"perundurai","city":"perundurai","state":"TamilNadu","Country":"India","pincode":"641302"},{"Id":2,"Bank_Name":"ICICI","Branch_Name":"erode","IFSC":"ICIC0006102","Contact_Number":9566348325,"Email":"icicierode@gmail.com","Address1":"erode","Address2":"erode","city":"erode","state":"TamilNadu","Country":"India","pincode":"641302"},{"Id":3,"Bank_Name":"SBI","Branch_Name":"erode","IFSC":"SBI000A32","Contact_Number":9566348325,"Email":"sbierode@gmail.com","Address1":"erode","Address2":"erode","city":"erode","state":"TamilNadu","Country":"India","pincode":"641302"},{"Id":4,"Bank_Name":"Axis","Branch_Name":"erode","IFSC":"HDfc000A32","Contact_Number":9566348325,"Email":"hdfcerode@gmail.com","Address1":"erode","Address2":"erode","city":"erode","state":"TamilNadu","Country":"India","pincode":"641302"},{"Id":5,"Bank_Name":"canar","Branch_Name":"sirumugai","IFSC":"CANB000A32","Contact_Number":9566348325,"Email":"canraerode@gmail.com","Address1":"sirumugai","Address2":"sirumugai","city":"sirumugai","state":"TamilNadu","Country":"India","pincode":"641302"},{"Id":7,"Bank_Name":"HDFC","Branch_Name":"perundurai","IFSC":"ICIC0001551","Contact_Number":9080592602,"Email":"hdfcperu@gmail.com","Address1":"perundurai","Address2":"perundurai","city":"perundurai","state":"Tamilnadu","Country":"India","pincode":"638451"},{"Id":8,"Bank_Name":"IDFC","Branch_Name":"erode","IFSC":"IDFC0001221","Contact_Number":9090998888,"Email":"IDFC@gmail.com","Address1":"salem","Address2":"salem","city":"salem","state":"TamilNadu","Country":"India","pincode":"638451"}]
+2023-04-26 15:01:59.334 +05:30 [INF] Inside Get-Bank-Details-By-Name Method:BankController
+2023-04-26 15:01:59.342 +05:30 [INF] Inside get-Bank-Details Method:BankService
+2023-04-26 15:01:59.871 +05:30 [INF] The user input for get-Bank-Details is "IDFC"
+2023-04-26 15:01:59.887 +05:30 [INF] The response for the Get-Bank-Details-By-Name  is [{"Id":8,"Bank_Name":"IDFC","Branch_Name":"erode","IFSC":"IDFC0001221","Contact_Number":9090998888,"Email":"IDFC@gmail.com","Address1":"salem","Address2":"salem","city":"salem","state":"TamilNadu","Country":"India","pincode":"638451","customers":[]}]
+2023-04-26 15:06:17.383 +05:30 [INF] Inside Update-All-Bank-Details-By-ID Method:BankController
+2023-04-26 15:06:17.388 +05:30 [INF] Inside update-Bank-Details Method:BankService
+2023-04-26 15:06:17.530 +05:30 [INF] The user input for update-Bank-Details is "IDFC0001221"
+2023-04-26 15:06:17.545 +05:30 [INF] The response for the Update-All-Bank-Details-By-ID is {"Id":8,"Bank_Name":"IDFC","Branch_Name":"erode-perundurai","IFSC":"IDFC0001221","Contact_Number":9090998888,"Email":"IDFC@gmail.com","Address1":"salem","Address2":"salem","city":"salem","state":"TamilNadu","Country":"India","pincode":"638451","Customerdetails":null,"Customer_Banks":null}
+2023-04-26 15:06:48.555 +05:30 [INF] Inside Delete-Bank-Details Method:BankController
+2023-04-26 15:06:48.558 +05:30 [INF] Inside Delete-Bank-Details Method:BankService
+2023-04-26 15:06:48.576 +05:30 [INF] The user input for   Delete-Bank-Details is  "IDFC0001221"
+2023-04-26 15:06:48.636 +05:30 [INF] The response for the Delete-Bank-Details is {"Id":8,"Bank_Name":"IDFC","Branch_Name":"erode-perundurai","IFSC":"IDFC0001221","Contact_Number":9090998888,"Email":"IDFC@gmail.com","Address1":"salem","Address2":"salem","city":"salem","state":"TamilNadu","Country":"India","pincode":"638451","Customerdetails":null,"Customer_Banks":null}
+2023-04-26 15:12:09.113 +05:30 [INF] Inside Update-All-Bank-Details-By-ID Method:BankController
+2023-04-26 15:12:09.263 +05:30 [INF] Inside update-Bank-Details Method:BankService
+2023-04-26 15:12:12.908 +05:30 [INF] The user input for update-Bank-Details is "ICIC0001551"
+2023-04-26 15:12:13.004 +05:30 [INF] The response for the Update-All-Bank-Details-By-ID is {"Id":1,"Bank_Name":"ICIC0001551","Branch_Name":"HDFC","IFSC":"perundurai","Contact_Number":9080592602,"Email":"hdfcperundurai@gmail.com","Address1":"perundurai","Address2":"perundurai","city":"perundurai","state":"TamilNadu","Country":"India","pincode":"638451","Customerdetails":null,"Customer_Banks":null}
+2023-04-26 15:15:36.233 +05:30 [INF] Inside Get-Bank-Details-By-Name Method:BankController
+2023-04-26 15:15:36.387 +05:30 [INF] Inside get-Bank-Details Method:BankService
+2023-04-26 15:15:42.151 +05:30 [INF] The user input for get-Bank-Details is "ICICI"
+2023-04-26 15:15:42.294 +05:30 [INF] The response for the Get-Bank-Details-By-Name  is [{"Id":2,"Bank_Name":"ICICI","Branch_Name":"erode","IFSC":"ICIC0006102","Contact_Number":9566348325,"Email":"icicierode@gmail.com","Address1":"erode","Address2":"erode","city":"erode","state":"TamilNadu","Country":"India","pincode":"641302","customers":[]}]
+2023-04-26 15:16:12.183 +05:30 [INF] Inside Get-Bank-Details-By-Name Method:BankController
+2023-04-26 15:16:12.185 +05:30 [INF] Inside get-Bank-Details Method:BankService
+2023-04-26 15:16:12.333 +05:30 [INF] The user input for get-Bank-Details is "SBI"
+2023-04-26 15:16:12.336 +05:30 [INF] The response for the Get-Bank-Details-By-Name  is [{"Id":3,"Bank_Name":"SBI","Branch_Name":"erode","IFSC":"SBI000A32","Contact_Number":9566348325,"Email":"sbierode@gmail.com","Address1":"erode","Address2":"erode","city":"erode","state":"TamilNadu","Country":"India","pincode":"641302","customers":["343567854358"]}]
+2023-04-26 15:17:48.790 +05:30 [INF] Inside Get-Bank-Details-By-Name Method:BankController
+2023-04-26 15:17:48.792 +05:30 [INF] Inside get-Bank-Details Method:BankService
+2023-04-26 15:17:48.961 +05:30 [INF] The user input for get-Bank-Details is "ICICI"
+2023-04-26 15:17:48.962 +05:30 [INF] The response for the Get-Bank-Details-By-Name  is [{"Id":1,"Bank_Name":"ICICI","Branch_Name":"perundurai","IFSC":"ICIC0001221","Contact_Number":9080592602,"Email":"hdfcperundurai@gmail.com","Address1":"perundurai","Address2":"perundurai","city":"perundurai","state":"TamilNadu","Country":"India","pincode":"638451","customers":["343501513698"]},{"Id":2,"Bank_Name":"ICICI","Branch_Name":"erode","IFSC":"ICIC0006102","Contact_Number":9566348325,"Email":"icicierode@gmail.com","Address1":"erode","Address2":"erode","city":"erode","state":"TamilNadu","Country":"India","pincode":"641302","customers":[]}]
+2023-04-26 15:18:12.651 +05:30 [INF] Inside Get-Bank-Details-By-Name Method:BankController
+2023-04-26 15:18:12.665 +05:30 [INF] Inside get-Bank-Details Method:BankService
+2023-04-26 15:18:12.720 +05:30 [INF] The user input for get-Bank-Details is "AXIS"
+2023-04-26 15:18:12.723 +05:30 [INF] The response for the Get-Bank-Details-By-Name  is [{"Id":4,"Bank_Name":"Axis","Branch_Name":"erode","IFSC":"HDfc000A32","Contact_Number":9566348325,"Email":"hdfcerode@gmail.com","Address1":"erode","Address2":"erode","city":"erode","state":"TamilNadu","Country":"India","pincode":"641302","customers":["343501513698","343567854358"]}]
+2023-04-26 15:19:22.627 +05:30 [INF] Inside Add-New-BankLoan-Details:BankLoanController
+2023-04-26 15:19:22.632 +05:30 [INF] Inside Add-New-BankLoan-Details:BankLoanService
+2023-04-26 15:19:23.318 +05:30 [INF] The response for the Add-New-BankLoan-Details is {"Name":"Tractor loan","Interest_Rate":6.75,"Loan_Tenure":12}
+2023-04-26 15:19:41.195 +05:30 [INF] Inside Get-all-BankLoan-Details:BankLoanController
+2023-04-26 15:19:41.230 +05:30 [INF] The response for the Get-all-BankLoan-Details is [{"id":1,"Name":"personal loan","Interest_Rate":7.5,"Loan_Tenure":36},{"id":2,"Name":"HOME loan","Interest_Rate":8.5,"Loan_Tenure":60},{"id":3,"Name":"Car loan","Interest_Rate":7.5,"Loan_Tenure":60},{"id":4,"Name":"Jewel loan","Interest_Rate":6.5,"Loan_Tenure":12},{"id":5,"Name":"property loan","Interest_Rate":10.0,"Loan_Tenure":60},{"id":6,"Name":"Agriculture loan","Interest_Rate":5.5,"Loan_Tenure":12},{"id":7,"Name":"Tractor loan","Interest_Rate":6.75,"Loan_Tenure":12}]
+2023-04-26 15:19:58.546 +05:30 [INF] Inside Get-BankLoan-Details-by-Name:BankLoanController
+2023-04-26 15:19:58.551 +05:30 [INF] Inside Get-BankLoan-Details-By-Name Method:BankLoanService
+2023-04-26 15:19:58.573 +05:30 [INF] The user input for Get-BankLoan-Details-By-Name is "tractor loan"
+2023-04-26 15:19:58.575 +05:30 [INF] The response for the Get-BankLoan-Details-by-Name is [{"id":7,"Name":"Tractor loan","Interest_Rate":6.75,"Loan_Tenure":12}]
+2023-04-26 15:20:39.028 +05:30 [INF] Inside update-BankLoan-Details-By-id:BankLoanController
+2023-04-26 15:20:39.033 +05:30 [INF] Inside update-BankLoan-Details-By-id:BankLoanService
+2023-04-26 15:20:39.173 +05:30 [INF] The user input for update-BankLoan-Details-By-id is 7
+2023-04-26 15:20:39.183 +05:30 [INF] The response for the update-BankLoan-Details-By-id is {"Id":7,"Name":"tractor","Interest_Rate":7.0,"Loan_Tenure":36,"loan_loanDetails":null,"customer_Banks":null}
+2023-04-26 15:21:11.140 +05:30 [INF] Inside Delete-BankLoan-Details-By-Id:BankLoanController
+2023-04-26 15:21:11.147 +05:30 [INF] Inside Delete-BankLoan-Details-By-Id:BankLoanService
+2023-04-26 15:21:11.161 +05:30 [INF] The user input for Delete-BankLoan-Details-By-Id  is 7
+2023-04-26 15:21:11.221 +05:30 [INF] The response for the Delete-BankLoan-Details-By-Id is {"Id":7,"Name":"tractor","Interest_Rate":7.0,"Loan_Tenure":36,"loan_loanDetails":null,"customer_Banks":null}
+2023-04-26 15:22:56.107 +05:30 [INF] Inside Add-New-Cibil-Details:CibilController
+2023-04-26 15:22:56.109 +05:30 [INF] Inside Add-New-Cibil-Details:CibilService
+2023-04-26 15:22:56.199 +05:30 [INF] The response for the Add-New-Cibil-Details is {"CustomerId":4,"CIBIL_year":"2020","CIBIL_Score":750.0}
+2023-04-26 15:23:21.499 +05:30 [INF] Inside Add-New-Cibil-Details:CibilController
+2023-04-26 15:23:21.501 +05:30 [INF] Inside Add-New-Cibil-Details:CibilService
+2023-04-26 15:23:21.535 +05:30 [INF] The response for the Add-New-Cibil-Details is {"CustomerId":4,"CIBIL_year":"2021","CIBIL_Score":726.0}
+2023-04-26 15:23:27.701 +05:30 [INF] Inside Add-New-Cibil-Details:CibilController
+2023-04-26 15:23:27.703 +05:30 [INF] Inside Add-New-Cibil-Details:CibilService
+2023-04-26 15:23:27.739 +05:30 [INF] The response for the Add-New-Cibil-Details is {"CustomerId":4,"CIBIL_year":"2022","CIBIL_Score":720.0}
+2023-04-26 15:23:42.697 +05:30 [INF] Inside Get-all-Cibil-Details:CibilController
+2023-04-26 15:23:42.701 +05:30 [INF] Inside Get-all-Cibil-Details:CibilService
+2023-04-26 15:23:42.727 +05:30 [INF] The response for the Get-all-Cibil-Details is [{"CustomerId":1,"CIBIL_year":"2017","CIBIL_Score":700.0},{"CustomerId":1,"CIBIL_year":"2018","CIBIL_Score":750.0},{"CustomerId":1,"CIBIL_year":"2019","CIBIL_Score":725.0},{"CustomerId":1,"CIBIL_year":"2020","CIBIL_Score":700.0},{"CustomerId":1,"CIBIL_year":"2021","CIBIL_Score":710.0},{"CustomerId":1,"CIBIL_year":"2022","CIBIL_Score":775.0},{"CustomerId":1,"CIBIL_year":"2023","CIBIL_Score":650.0},{"CustomerId":2,"CIBIL_year":"2020","CIBIL_Score":650.0},{"CustomerId":2,"CIBIL_year":"2021","CIBIL_Score":800.0},{"CustomerId":2,"CIBIL_year":"2022","CIBIL_Score":725.0},{"CustomerId":2,"CIBIL_year":"2023","CIBIL_Score":750.0},{"CustomerId":4,"CIBIL_year":"2020","CIBIL_Score":750.0},{"CustomerId":4,"CIBIL_year":"2021","CIBIL_Score":726.0},{"CustomerId":4,"CIBIL_year":"2022","CIBIL_Score":720.0}]
+2023-04-26 15:23:53.196 +05:30 [INF] Inside Get-Cibil-Details-by-id:CibilController
+2023-04-26 15:23:53.200 +05:30 [INF] Inside Get-Cibil-Details-by-id:CibilService
+2023-04-26 15:23:53.225 +05:30 [INF] The user input for Get-Cibil-Details-by-id is 4
+2023-04-26 15:23:53.227 +05:30 [INF] The response for the Get-Cibil-Details-by-id is [{"CustomerId":4,"CIBIL_year":"2020","CIBIL_Score":750.0},{"CustomerId":4,"CIBIL_year":"2021","CIBIL_Score":726.0},{"CustomerId":4,"CIBIL_year":"2022","CIBIL_Score":720.0}]
+2023-04-26 15:24:28.006 +05:30 [INF] Inside update-Cibil-Details-By-id:CibilController
+2023-04-26 15:24:28.010 +05:30 [INF] Inside update-Cibil-Details-By-id:CibilService
+2023-04-26 15:24:28.081 +05:30 [INF] The user input for  update-Cibil-Details-By-id is 4
+2023-04-26 15:24:28.093 +05:30 [INF] The response for the update-Cibil-Details-By-id is {"Id":4,"Customer":null,"CustomerId":4,"CIBIL_year":"2021","CIBIL_Score":600.0}
+2023-04-26 15:24:45.758 +05:30 [INF] Inside Delete-Cibil-Details-By-Id:CibilController
+2023-04-26 15:24:45.763 +05:30 [INF] Inside Delete-Cibil-Details-By-Id:CibilService
+2023-04-26 15:24:45.777 +05:30 [INF] The user input for Delete-Cibil-Details-By-Id is 4
+2023-04-26 15:24:45.795 +05:30 [INF] The response for the Delete-Cibil-Details-By-Id is {"Id":4,"Customer":null,"CustomerId":4,"CIBIL_year":"2021","CIBIL_Score":600.0}
+2023-04-26 15:25:13.043 +05:30 [INF] Inside Delete-Cibil-Details-By-Id:CibilController
+2023-04-26 15:25:13.063 +05:30 [INF] Inside Delete-Cibil-Details-By-Id:CibilService
+2023-04-26 15:25:13.075 +05:30 [INF] The user input for Delete-Cibil-Details-By-Id is 4
+2023-04-26 15:25:13.076 +05:30 [INF] The response for the Delete-Cibil-Details-By-Id is null
+2023-04-26 15:27:06.744 +05:30 [INF] Inside Delete-Cibil-Details-By-Id:CibilController
+2023-04-26 15:27:06.895 +05:30 [INF] Inside Delete-Cibil-Details-By-Id:CibilService
+2023-04-26 15:27:11.890 +05:30 [INF] The user input for Delete-Cibil-Details-By-Id is 4
+2023-04-26 15:27:11.891 +05:30 [INF] The response for the Delete-Cibil-Details-By-Id is null
+2023-04-26 15:30:02.250 +05:30 [INF] Inside Delete-Cibil-Details-By-Customer-Id:CibilController
+2023-04-26 15:30:02.407 +05:30 [INF] Inside Delete-Cibil-Details-By-Customer-Id:CibilService
+2023-04-26 15:30:07.429 +05:30 [INF] The user input for Delete-Cibil-Details-By-Customer-Id is 4
+2023-04-26 15:30:07.980 +05:30 [INF] The response for the Delete-Cibil-Details-By-Customer-Id is {"Id":18,"Customer":null,"CustomerId":4,"CIBIL_year":"2020","CIBIL_Score":750.0}
+2023-04-26 15:30:32.291 +05:30 [INF] Inside Delete-Cibil-Details-By-Customer-Id:CibilController
+2023-04-26 15:30:32.293 +05:30 [INF] Inside Delete-Cibil-Details-By-Customer-Id:CibilService
+2023-04-26 15:30:32.331 +05:30 [INF] The user input for Delete-Cibil-Details-By-Customer-Id is 4
+2023-04-26 15:30:32.347 +05:30 [INF] The response for the Delete-Cibil-Details-By-Customer-Id is {"Id":19,"Customer":null,"CustomerId":4,"CIBIL_year":"2021","CIBIL_Score":726.0}
+2023-04-26 15:30:38.160 +05:30 [INF] Inside Delete-Cibil-Details-By-Customer-Id:CibilController
+2023-04-26 15:30:38.166 +05:30 [INF] Inside Delete-Cibil-Details-By-Customer-Id:CibilService
+2023-04-26 15:30:38.311 +05:30 [INF] The user input for Delete-Cibil-Details-By-Customer-Id is 4
+2023-04-26 15:30:38.328 +05:30 [INF] The response for the Delete-Cibil-Details-By-Customer-Id is {"Id":20,"Customer":null,"CustomerId":4,"CIBIL_year":"2022","CIBIL_Score":720.0}
+2023-04-26 15:31:53.292 +05:30 [INF] Inside Add-New-Cibil-Details:CibilController
+2023-04-26 15:31:53.412 +05:30 [INF] Inside Add-New-Cibil-Details:CibilService
+2023-04-26 15:31:58.076 +05:30 [INF] The response for the Add-New-Cibil-Details is {"CustomerId":4,"CIBIL_year":"2017","CIBIL_Score":650.0}
+2023-04-26 15:32:05.905 +05:30 [INF] Inside Add-New-Cibil-Details:CibilController
+2023-04-26 15:32:05.908 +05:30 [INF] Inside Add-New-Cibil-Details:CibilService
+2023-04-26 15:32:06.044 +05:30 [INF] The response for the Add-New-Cibil-Details is {"CustomerId":4,"CIBIL_year":"2018","CIBIL_Score":650.0}
+2023-04-26 15:32:10.907 +05:30 [INF] Inside Add-New-Cibil-Details:CibilController
+2023-04-26 15:32:10.909 +05:30 [INF] Inside Add-New-Cibil-Details:CibilService
+2023-04-26 15:32:10.959 +05:30 [INF] The response for the Add-New-Cibil-Details is {"CustomerId":4,"CIBIL_year":"2019","CIBIL_Score":650.0}
+2023-04-26 15:32:16.319 +05:30 [INF] Inside Add-New-Cibil-Details:CibilController
+2023-04-26 15:32:16.324 +05:30 [INF] Inside Add-New-Cibil-Details:CibilService
+2023-04-26 15:32:16.352 +05:30 [INF] The response for the Add-New-Cibil-Details is {"CustomerId":4,"CIBIL_year":"2020","CIBIL_Score":650.0}
+2023-04-26 15:32:32.850 +05:30 [INF] Inside Delete-Cibil-Details-By-Customer-Id:CibilController
+2023-04-26 15:32:32.885 +05:30 [INF] Inside Delete-Cibil-Details-By-Customer-Id:CibilService
+2023-04-26 15:32:34.001 +05:30 [INF] The user input for Delete-Cibil-Details-By-Customer-Id is 4
+2023-04-26 15:32:34.090 +05:30 [INF] The response for the Delete-Cibil-Details-By-Customer-Id is {"Id":21,"Customer":null,"CustomerId":4,"CIBIL_year":"2017","CIBIL_Score":650.0}
+2023-04-26 15:32:40.858 +05:30 [INF] Inside Delete-Cibil-Details-By-Customer-Id:CibilController
+2023-04-26 15:32:40.863 +05:30 [INF] Inside Delete-Cibil-Details-By-Customer-Id:CibilService
+2023-04-26 15:32:40.893 +05:30 [INF] The user input for Delete-Cibil-Details-By-Customer-Id is 4
+2023-04-26 15:32:40.913 +05:30 [INF] The response for the Delete-Cibil-Details-By-Customer-Id is {"Id":22,"Customer":null,"CustomerId":4,"CIBIL_year":"2018","CIBIL_Score":650.0}
+2023-04-26 15:32:52.517 +05:30 [INF] Inside Delete-Cibil-Details-By-Customer-Id:CibilController
+2023-04-26 15:32:52.520 +05:30 [INF] Inside Delete-Cibil-Details-By-Customer-Id:CibilService
+2023-04-26 15:32:52.537 +05:30 [INF] The user input for Delete-Cibil-Details-By-Customer-Id is 4
+2023-04-26 15:32:52.553 +05:30 [INF] The response for the Delete-Cibil-Details-By-Customer-Id is {"Id":23,"Customer":null,"CustomerId":4,"CIBIL_year":"2019","CIBIL_Score":650.0}
+2023-04-26 15:33:25.623 +05:30 [INF] Inside Add-New-Cibil-Details:CibilController
+2023-04-26 15:33:25.624 +05:30 [INF] Inside Add-New-Cibil-Details:CibilService
+2023-04-26 15:33:25.648 +05:30 [INF] The response for the Add-New-Cibil-Details is {"CustomerId":4,"CIBIL_year":"2019","CIBIL_Score":650.0}
+2023-04-26 15:33:30.164 +05:30 [INF] Inside Add-New-Cibil-Details:CibilController
+2023-04-26 15:33:30.170 +05:30 [INF] Inside Add-New-Cibil-Details:CibilService
+2023-04-26 15:33:30.205 +05:30 [INF] The response for the Add-New-Cibil-Details is {"CustomerId":4,"CIBIL_year":"2018","CIBIL_Score":650.0}
+2023-04-26 15:33:38.673 +05:30 [INF] Inside Add-New-Cibil-Details:CibilController
+2023-04-26 15:33:38.677 +05:30 [INF] Inside Add-New-Cibil-Details:CibilService
+2023-04-26 15:33:38.705 +05:30 [INF] The response for the Add-New-Cibil-Details is {"CustomerId":4,"CIBIL_year":"2017","CIBIL_Score":650.0}
+2023-04-26 15:34:27.873 +05:30 [INF] Inside Delete-Cibil-Details-By-Customer-Id:CibilController
+2023-04-26 15:34:28.092 +05:30 [INF] Inside Delete-Cibil-Details-By-Customer-Id:CibilService
+2023-04-26 15:34:32.945 +05:30 [INF] The user input for Delete-Cibil-Details-By-Customer-Id is 4
+2023-04-26 15:34:33.504 +05:30 [INF] The response for the Delete-Cibil-Details-By-Customer-Id is {"Id":24,"Customer":null,"CustomerId":4,"CIBIL_year":"2020","CIBIL_Score":650.0}
+2023-04-26 15:34:54.282 +05:30 [INF] Inside Delete-Cibil-Details-By-Customer-Id:CibilController
+2023-04-26 15:34:54.285 +05:30 [INF] Inside Delete-Cibil-Details-By-Customer-Id:CibilService
+2023-04-26 15:34:54.319 +05:30 [INF] The user input for Delete-Cibil-Details-By-Customer-Id is 4
+2023-04-26 15:34:54.334 +05:30 [INF] The response for the Delete-Cibil-Details-By-Customer-Id is {"Id":25,"Customer":null,"CustomerId":4,"CIBIL_year":"2019","CIBIL_Score":650.0}
+2023-04-26 15:35:09.611 +05:30 [INF] Inside Delete-Cibil-Details-By-Customer-Id:CibilController
+2023-04-26 15:35:09.618 +05:30 [INF] Inside Delete-Cibil-Details-By-Customer-Id:CibilService
+2023-04-26 15:35:09.749 +05:30 [INF] The user input for Delete-Cibil-Details-By-Customer-Id is 4
+2023-04-26 15:35:09.760 +05:30 [INF] The response for the Delete-Cibil-Details-By-Customer-Id is {"Id":26,"Customer":null,"CustomerId":4,"CIBIL_year":"2018","CIBIL_Score":650.0}
+2023-04-26 15:35:47.924 +05:30 [INF] Inside Add-New-Customer-Details:CustomerController
+2023-04-26 15:35:47.927 +05:30 [INF] Inside To-check-alphabets-First_name:CustomerService
+2023-04-26 15:35:47.929 +05:30 [INF] The user input is "string"
+2023-04-26 15:35:47.931 +05:30 [INF] The response for the get Banking is true
+2023-04-26 15:35:47.934 +05:30 [INF] Inside To-check-First_Name-Aadhar-exists:CustomerService
+2023-04-26 15:35:48.014 +05:30 [INF] The user input is "string"
+2023-04-26 15:35:48.015 +05:30 [INF] The user input is "string"
+2023-04-26 15:35:48.017 +05:30 [INF] The response for the get Banking is 0
+2023-04-26 15:35:48.019 +05:30 [INF] Inside Add-New-Customer-Details:CustomerService
+2023-04-26 15:35:48.552 +05:30 [INF] The response for the Add-New-Customer-Details is {"Id":0,"First_Name":"string","Last_Name":"string","DateOfBirth":"2023-04-26T10:05:30.97Z","age":0.0,"Mobile_Number":0,"Email":"string","Aadhar":"string","Address1":"string","Address2":"string","city":"string","state":"string","Country":"string","pincode":"string","Account_Number":"string","Account_Type":"string","loanDetailsId":[1],"BankId":[1]}
+2023-04-26 15:36:13.410 +05:30 [INF] Inside Get-Customer-Details-By-Account-Number-First-Name-Aadhar:CustomerController
+2023-04-26 15:36:13.418 +05:30 [INF] Inside Get-Customer-Details-by-Account_number-First_name-Aadhar:CustomerService
+2023-04-26 15:36:14.004 +05:30 [INF] The user input for Get-Customer-Details-by-Account_number is null
+2023-04-26 15:36:14.008 +05:30 [INF] The user input for Get-Customer-Details-by-First-Name is "string"
+2023-04-26 15:36:14.011 +05:30 [INF] The user input for Get-Customer-Details-by-Aadhar is null
+2023-04-26 15:36:14.026 +05:30 [INF] The response for the Get-Customer-Details-By-Account-Number-First-Name-Aadhar is [{"Id":15,"First_Name":"string","Last_Name":"string","DateOfBirth":"2023-04-26T10:05:30.97","age":0.0,"Mobile_Number":0,"Email":"string","Aadhar":"string","Address1":"string","Address2":"string","city":"string","state":"string","Country":"string","pincode":"string","Account_Number":"string","Account_Type":"string","loanDetails":[1],"Bank_Details":["ICIC0001221"]}]
+2023-04-26 15:36:34.291 +05:30 [INF] Inside Get-Customer-Details-by-id:CustomerController
+2023-04-26 15:36:34.300 +05:30 [INF] Inside Get-Customer-Details-by-id:CustomerService
+2023-04-26 15:36:34.381 +05:30 [INF] The user input for Get-Customer-Details-by-Id is 15
+2023-04-26 15:36:34.384 +05:30 [INF] The response for the Get-Customer-Details-by-id is [{"Id":15,"First_Name":"string","Last_Name":"string","DateOfBirth":"2023-04-26T10:05:30.97","age":0.0,"Mobile_Number":0,"Email":"string","Aadhar":"string","Address1":"string","Address2":"string","city":"string","state":"string","Country":"string","pincode":"string","Account_Number":"string","Account_Type":"string","loanDetails":[1],"Bank_Details":["ICIC0001221"]}]
+2023-04-26 15:37:39.232 +05:30 [INF] Inside update-Customer-Details-By-id:CustomerController
+2023-04-26 15:37:39.235 +05:30 [INF] Inside update-Customer-Details-By-id:CustomerService
+2023-04-26 15:37:39.285 +05:30 [INF] The user input  for update-Customer-Details-By-id is 15
+2023-04-26 15:37:39.301 +05:30 [INF] The response for the update-Customer-Details-By-id is {"Id":15,"First_Name":"sruti","Last_Name":"nakul","DateOfBirth":"2023-04-26T10:06:48.818Z","age":0.0,"Mobile_Number":9080592602,"Email":"string@gmail.com","Aadhar":"ADSSDKKD","Address1":"kijiii","Address2":"string","city":"string","state":"string","Country":"string","pincode":"string","Account_Number":"string","Account_Type":"string","loanDetailsCus":null,"cibilDetails":null,"loanDetailsCusList":null,"banks":null,"Customer_Banks":null}
+2023-04-26 15:38:05.217 +05:30 [INF] Inside Delete-Customer-Details-By-Id:CustomerController
+2023-04-26 15:38:05.222 +05:30 [INF] Inside Delete-Customer-Details-By-Id:CustomerService
+2023-04-26 15:38:05.238 +05:30 [INF] The user input for Delete-Customer-Details-By-Id is 15
+2023-04-26 15:38:05.278 +05:30 [INF] The response for the Delete-Customer-Details-By-Id is {"Id":15,"First_Name":"sruti","Last_Name":"nakul","DateOfBirth":"2023-04-26T10:06:48.818","age":0.0,"Mobile_Number":9080592602,"Email":"string@gmail.com","Aadhar":"ADSSDKKD","Address1":"kijiii","Address2":"string","city":"string","state":"string","Country":"string","pincode":"string","Account_Number":"string","Account_Type":"string","loanDetailsCus":null,"cibilDetails":null,"loanDetailsCusList":null,"banks":null,"Customer_Banks":null}
+2023-04-26 15:38:35.889 +05:30 [INF] Inside Add-New-Loan-Details:LoanDetailsController
+2023-04-26 15:38:35.893 +05:30 [INF] Inside Add-New-Loan-Details:LoanDetailsService
+2023-04-26 15:38:35.986 +05:30 [INF] The response for the Add-New-Loan-Details is {"id":0,"Loan_Amount":6887888.0,"Loan_Provided":"2023-04-26T10:08:20.897Z","payment_Mode":"cash","LoanID":[1]}
+2023-04-26 15:38:49.059 +05:30 [INF] Inside Get-all-Loan-Details:LoanDetailsController
+2023-04-26 15:38:49.068 +05:30 [INF] Inside Get-Loan-Details:LoanDetailsService
+2023-04-26 15:38:49.148 +05:30 [INF] The response for the Get-all-Loan-Details is [{"id":0,"Loan_Amount":100000.0,"Loan_Provided":"2020-04-12T09:38:56.315","payment_Mode":"Cash","bankLoans":["personal loan","Car loan"]},{"id":0,"Loan_Amount":200000.0,"Loan_Provided":"2020-04-12T09:38:56.315","payment_Mode":"UPI","bankLoans":["HOME loan"]},{"id":0,"Loan_Amount":50000.0,"Loan_Provided":"2023-04-12T09:42:49.944","payment_Mode":"UPI","bankLoans":["personal loan"]},{"id":0,"Loan_Amount":6887890.0,"Loan_Provided":"2023-04-26T10:08:20.897","payment_Mode":"cash","bankLoans":["personal loan"]}]
+2023-04-26 15:39:17.303 +05:30 [INF] Inside Get-Loan-Details-by-id:LoanDetailsController
+2023-04-26 15:39:17.306 +05:30 [INF] Inside Get-Loan-Details-by-id:LoanDetailsService
+2023-04-26 15:39:17.386 +05:30 [INF] The user input for Get-Loan-Details-by-id is 4
+2023-04-26 15:39:17.390 +05:30 [INF] The response for the  Get-Loan-Details-by-id is [{"id":4,"Loan_Amount":6887890.0,"Loan_Provided":"2023-04-26T10:08:20.897","payment_Mode":"cash","bankLoans":["personal loan"]}]
+2023-04-26 15:39:34.066 +05:30 [INF] Inside Delete-Loan-Details-By-Id:LoanDetailsController
+2023-04-26 15:39:34.068 +05:30 [INF] Inside Delete-Loan-Details-By-Id:LoanDetailsService
+2023-04-26 15:39:34.108 +05:30 [INF] The user input for Delete-Loan-Details-By-Id is 4
+2023-04-26 15:39:34.135 +05:30 [INF] The response for the Delete-Loan-Details-By-Id is {"Id":4,"Loan_Amount":6887890.0,"Loan_Provided":"2023-04-26T10:08:20.897","payment_Mode":"cash","loanDetailsCusList":null,"loan_loanDetails":null}

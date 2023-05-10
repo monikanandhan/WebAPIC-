@@ -16,12 +16,12 @@ namespace Banking.Service
             Context = _Context;
         }
 
-        public void AddLoanDetails(LoanDetailsVM loanDetails)
+        public void AddLoanDetails(LoanDetailsNoIdVM loanDetails)
         {
             Log.Information("Inside Add-New-Loan-Details:{@Controller}", GetType().Name);
             var NewDetails = new LoanDetails()
             {
-                Id=loanDetails.id,
+                
                 Loan_Amount = loanDetails.Loan_Amount,
                 Loan_Provided = loanDetails.Loan_Provided,
                 payment_Mode = loanDetails.payment_Mode
@@ -37,9 +37,7 @@ namespace Banking.Service
                     BankLoanId = item
                 };
                 Context.loan_loanDetails.Add(NewLoanDetails);
-                Context.SaveChanges();
-               
-
+                Context.SaveChanges();              
             }
 
         }
@@ -47,7 +45,7 @@ namespace Banking.Service
         public List<LoanDetailsLoanVM> GetLoanDetails()
         {
             Log.Information("Inside Get-Loan-Details:{@Controller}", GetType().Name);
-            var result = Context.loanDetail.Select(x => new LoanDetailsLoanVM()
+            var GetLoanDetails = Context.loanDetail.Select(x => new LoanDetailsLoanVM()
             {
                
                 Loan_Amount = x.Loan_Amount,
@@ -57,13 +55,13 @@ namespace Banking.Service
             }).ToList();
             Context.SaveChanges();
            
-            return result;
+            return GetLoanDetails;
         }
 
         public List<LoanDetailsLoanVM> GetLoanDetailsByID(int id)
         {
             Log.Information("Inside Get-Loan-Details-by-id:{@Controller}", GetType().Name);
-            var result = Context.loanDetail.Where(m=>m.Id==id).Select(x => new LoanDetailsLoanVM()
+            var GetLoanDetailsId = Context.loanDetail.Where(m=>m.Id==id).Select(x => new LoanDetailsLoanVM()
             {
                 id=x.Id,
                 Loan_Amount = x.Loan_Amount,
@@ -72,36 +70,36 @@ namespace Banking.Service
               bankLoans=x.loan_loanDetails.Where(s=>s.LoanDetailsId==id).Select(x=>x.BankLoan.Name).ToList()
             }).ToList();
             Context.SaveChanges();
-            Log.Information($"The user input is {JsonConvert.SerializeObject(id)}");
-            return result;
+            Log.Information($"The user input for Get-Loan-Details-by-id is {JsonConvert.SerializeObject(id)}");
+            return GetLoanDetailsId;
         }
 
         public LoanDetails updateLoanDetails(int id, LoanDetailsonly loanDetails)
         {
             Log.Information("Inside update-Loan-Details-By-id:{@Controller}", GetType().Name);
-            var result = Context.loanDetail.FirstOrDefault(m => m.Id == id);
-            if(result != null)
+            var updateLoanDetails = Context.loanDetail.FirstOrDefault(m => m.Id == id);
+            if(updateLoanDetails != null)
             {
-                result.Loan_Amount = loanDetails.Loan_Amount;
-                result.Loan_Provided = loanDetails.Loan_Provided;
-                result.payment_Mode = loanDetails.payment_Mode; 
+                updateLoanDetails.Loan_Amount = loanDetails.Loan_Amount;
+                updateLoanDetails.Loan_Provided = loanDetails.Loan_Provided;
+                updateLoanDetails.payment_Mode = loanDetails.payment_Mode; 
             }
             Context.SaveChanges();
-            Log.Information($"The user input is {JsonConvert.SerializeObject(id)}");
-            return result;
+            Log.Information($"The user input for update-Loan-Details-By-id is {JsonConvert.SerializeObject(id)}");
+            return updateLoanDetails;
         }
 
         public LoanDetails DeleteDetails(int id)
         {
-            Log.Information("Inside Delet-Loan-Details-By-Id:{@Controller}", GetType().Name);
-            var result = Context.loanDetail.FirstOrDefault(m => m.Id == id);
-            Log.Information($"The user input is {JsonConvert.SerializeObject(id)}");
-            if (result != null)
+            Log.Information("Inside Delete-Loan-Details-By-Id:{@Controller}", GetType().Name);
+            var DeleteLoanDetails = Context.loanDetail.FirstOrDefault(m => m.Id == id);
+            Log.Information($"The user input for Delete-Loan-Details-By-Id is {JsonConvert.SerializeObject(id)}");
+            if (DeleteLoanDetails != null)
             {
-                Context.loanDetail.Remove(result);
+                Context.loanDetail.Remove(DeleteLoanDetails);
                 Context.SaveChanges();
             }
-            return result;
+            return DeleteLoanDetails;
         }
     }
 }

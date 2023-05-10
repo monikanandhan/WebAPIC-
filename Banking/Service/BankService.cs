@@ -15,7 +15,7 @@ namespace Banking.Service
             Context = _context;
         }
 
-        public void AddNewBankDetails(BankByNameVM bank)
+        public void AddNewBankDetails(BankListVM bank)
         {
             Log.Information("Inside add-Bank-Details Method:{Controller}", GetType().Name);
             var NewBank = new Bank()
@@ -34,14 +34,13 @@ namespace Banking.Service
 
             };
             Context.bank.Add(NewBank);
-            //Log.Information($"The response for the get Banking is {JsonConvert.SerializeObject(NewBank)}");
             Context.SaveChanges();
            
         }
 
         public List<BankByNameVM> GetAllBanks()
         {
-            var GetBankId = Context.bank.Select(n => new BankByNameVM()
+            var GetBank = Context.bank.Select(n => new BankByNameVM()
             {
 
                 Id = n.Id,
@@ -61,7 +60,7 @@ namespace Banking.Service
             }).ToList();
             Context.SaveChanges();
 
-            return GetBankId;
+            return GetBank;
         }
 
         public List<BankWithCustomerVM> GetBankWithCustomer(string Bank_Name)
@@ -86,14 +85,11 @@ namespace Banking.Service
 
             }).ToList();
             Context.SaveChanges();
-
-
-
-
-
-            Log.Information($"The user input is {JsonConvert.SerializeObject(Bank_Name)}");
+            Log.Information($"The user input for get-Bank-Details is {JsonConvert.SerializeObject(Bank_Name)}");
             return GetBankId;
         }
+
+        /***********GET-BY-NAME********/
 
         //public List<BankByNameVM> GetBankByName(string Bank_Name)
         //{
@@ -120,31 +116,31 @@ namespace Banking.Service
        public Bank UpdateBank(string IFSC, BankByNameVM bank)
         {
             Log.Information("Inside update-Bank-Details Method:{Controller}", GetType().Name);
-            var NewDetails = Context.bank.FirstOrDefault(n=>n.IFSC== IFSC);
-            if(NewDetails != null) 
+            var UpdateBank = Context.bank.FirstOrDefault(n=>n.IFSC== IFSC);
+            if(UpdateBank != null) 
             {
-                NewDetails.Bank_Name = bank.Bank_Name;
-                NewDetails.Branch_Name = bank.Branch_Name;
-                NewDetails.IFSC = bank.IFSC;
-                NewDetails.Contact_Number = bank.Contact_Number;
-                NewDetails.Email = bank.Email;
-                NewDetails.Address1 = bank.Address1;
-                NewDetails.Address2 = bank.Address2;
-                NewDetails.city = bank.city;
-                NewDetails.state = bank.state;
-                NewDetails.Country = bank.Country;
-                NewDetails.pincode = bank.pincode;
+                
+                UpdateBank.Branch_Name = bank.Branch_Name;
+                UpdateBank.IFSC = bank.IFSC;
+                UpdateBank.Contact_Number = bank.Contact_Number;
+                UpdateBank.Email = bank.Email;
+                UpdateBank.Address1 = bank.Address1;
+                UpdateBank.Address2 = bank.Address2;
+                UpdateBank.city = bank.city;
+                UpdateBank.state = bank.state;
+                UpdateBank.Country = bank.Country;
+                UpdateBank.pincode = bank.pincode;
             }
             Context.SaveChanges();
-            Log.Information($"The user input is {JsonConvert.SerializeObject(IFSC)}");
-            return NewDetails;
+            Log.Information($"The user input for update-Bank-Details is {JsonConvert.SerializeObject(IFSC)}");
+            return UpdateBank;
         }
 
         public Bank DeleteByIFSC(string IFSC)
         {
             Log.Information("Inside Delete-Bank-Details Method:{Controller}", GetType().Name);
             var RemoveDetails = Context.bank.FirstOrDefault(n => n.IFSC == IFSC);
-            Log.Information($"The user input is {JsonConvert.SerializeObject(IFSC)}");
+            Log.Information($"The user input for   Delete-Bank-Details is  {JsonConvert.SerializeObject(IFSC)}");
             if (RemoveDetails != null)
             {
                 Context.bank.Remove(RemoveDetails);   
